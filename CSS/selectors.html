@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        
+        /* 1. Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 2. Type Selector */
+        h1 {
+            font-size: 10px;
+        }
+        p {
+            margin-bottom: 14px;
+        }
+
+        /* 3. Class Selector */
+        .card {
+            background-color: aquamarine;
+            color: #2a2a2a;
+        }
+
+        /* 4. ID Selector */
+        #card {
+            color: teal;
+            background-color: #3b3b3b;
+        }
+
+        /* 5. Attribute Selector */
+        input[type="text"] {
+            background-color: #f2f2f2;
+            border: none;
+            padding: 10px;
+        }
+
+        /* 6. Descendant Selector */
+        div p {
+            font-style: italic;
+        }
+
+        /* 7. Child Selector */
+        ul > li {
+            font-weight: bold;
+        }
+
+        /* 8. Adjacent Sibling Selector */
+        h1 + span {
+            font-weight: 12px;
+            color: #666;
+        }
+
+        /* 9. General Sibling Selector */
+        h1 ~ p {
+            font-style: oblique;
+            color: #999;
+        }
+
+        /* 10. Pseudo-class Selector */
+        h1:hover {
+            color: #ff0000;
+        }
+        
+        /* 11. Pseudo-element Selector */
+        h1::after {
+            content: "";
+            color: #ff0000;
+        }
+        p::first-letter {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        p::last-line {
+            font-style: italic;
+        }
+
+        /* 12. Grouping Selector */
+        h1, h2, h3 {
+            font-weight: normal;
+        }
+        h1 + h2, h1 + h3 {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

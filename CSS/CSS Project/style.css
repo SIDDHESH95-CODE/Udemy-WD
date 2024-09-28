@@ -19,11 +19,12 @@ body {
 }
 
 .card {
-    background-color: azure;
+    background-color:rgb(255, 234, 207);
     padding: 20px;
     border-radius: 5px;
-    height: 300px;
+    /* height: 300px; */
     width: 400px;
+    position: relative;
 }
 
 .card h1 {
@@ -32,7 +33,7 @@ body {
     margin-bottom: 40px;
 }
 
-.card input {
+#email{
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -40,7 +41,28 @@ body {
     border-radius: 3px;
     outline: none;
     background-color: #f2f2f2;
-    font-size: 15px;
+    /* font-size: 15px; */
+}
+
+#name, #surname {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-color: #f2f2f2;
+    width: 49%;
+}
+
+#password {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-color: #f2f2f2;
+    width: 50%;
+    margin-left: 25%;
 }
 
 .card button {

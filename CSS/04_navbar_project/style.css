@@ -1,0 +1,138 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #424242;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.navbar-container {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.nav-1 {
+    background-color: #F5F5F5;
+    padding: 5px;
+}
+
+.nav-1 ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li a {
+    text-decoration: none;
+    color: #000;
+    /* background-color: teal; */
+    /* padding: 5px 10px; */
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-1 .login-btn {
+    background-color: teal;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.nav-1 ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: teal;
+    transform: scaleX(0);
+}
+
+.nav-1 ul li a:hover::after {
+    transform: scaleX(1);
+    transition: all 0.2s ease;
+}
+
+
+.nav-2 {
+    background-color: #6A9C89;
+    padding: 5px;
+    width: 200px;
+}
+
+.nav-2 ul li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.nav-2 ul li:hover {
+    background-color: #16423C;
+    cursor: pointer;
+}
+
+
+.nav-2 ul li a{
+    color: #F5F5F5;
+}
+
+
+.nav-2 .login-btn {
+    width: 100%;
+    padding: 5px;
+    background-color: #16423C;
+    color: #fff;
+    border: none;
+    margin-bottom: 3px;
+    border : 1px solid #fff;
+}
+
+.nav-3 ul {
+    background-color: #B7E0FF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #edf1f3;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px;
+    /* margin-top: 10px; */
+    min-width: 15%;
+}
+
+.dropdown-menu a {
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-3 .login-btn {
+    background-color: #3ca9fc;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dropdown-menu a:hover {
+    background-color: #3896ff;
+}

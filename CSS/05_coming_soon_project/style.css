@@ -1,0 +1,84 @@
+::selection {
+    background-color: #4568DC; /* Selection background color */
+    color: #ffffff; /* Selection text color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to top, #4e54c8, #8f94fb);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #4e54c8; */
+}
+
+.content {
+    border-radius: 10px;
+    width: 50%;
+    max-height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.content img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+form input {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #4e54c8;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4e54c8;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #000000;
+    transition: background-color 0.3s linear;
+}

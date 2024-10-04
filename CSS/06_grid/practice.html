@@ -12,25 +12,32 @@
         padding: 0;
         font-family: 'Courier New', Courier, monospace;
     }
+
     .container {
         height: 90vh;
         /* background-color: black; */
     }
+
     .item {
         background-color: lightgray;
         padding: 10px;
         text-align: center;
         border: 1px solid black;
     }
-    .header, .footer {
+
+    .header,
+    .footer {
         background-color: #D9B3FF;
     }
+
     .content {
         background-color: #94D7F2;
     }
+
     .sidebar {
         background-color: #04D9D9;
     }
+
     .items {
         height: 100%;
         display: grid;
@@ -40,21 +47,26 @@
         padding: 20px;
         background-color: #F2F2F2;
     }
+
     .header {
         grid-column: 1/4;
     }
+
     .sidebar {
         grid-column: 1/2;
         grid-row: 2/4;
     }
+
     .content-1 {
         grid-column: 2/4;
     }
+
     .footer {
         grid-column: 1/4;
         grid-row: 4/5;
     }
 </style>
+
 <body>
     <div class="container">
         <div class="items">

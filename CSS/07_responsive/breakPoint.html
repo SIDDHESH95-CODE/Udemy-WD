@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Breakpoints</title>
+</head>
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+        padding: 0;
+        background-color: #1a1a1a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .responsive {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1em;
+        width: 100%;
+        max-width: 1200px;
+        /* width: 80%; */
+        padding: 20px;
+        background-color: grey;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            align-items: start;
+        }
+        .responsive {
+            background-color: aquamarine;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px){
+        body {
+            align-items: center;
+        }
+        .responsive {
+            background-color:cadetblue;
+            color: #fff;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="responsive">
+        This div changes the appearance based on the screen size.
+    </div>
+</body>
+
+</html>

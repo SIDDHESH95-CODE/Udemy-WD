@@ -12,3 +12,10 @@ There are 3 types of methods for writing CSS:
 1. Inline style
 2. Style tag
 3. External .css file
+
+Tailwind CSS:
+- In responsiveness of the webpage, the breakpoints that are provided by the Tailwind are mobile first only.
+That means imagine that you are building a website for mobile and breakpoints used are for sm screen first then md screen and then lg screens.
+- sm: whatever styles you have provided in sm are going to apply to the above sm screens.
+- md: whatever styles you have provided in md are going to apply to the above md screens.
+- lg: whatever styles you have provided in lg are going to apply to the above lg screens.

@@ -474,7 +474,7 @@ dialog {
 }
 
 /*
-Prevent resizing text areas horizontally by default.
+Prevent resizing textareas horizontally by default.
 */
 
 textarea {
@@ -580,12 +580,20 @@ video {
   height: 100lvh;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-\[\] {
+  width: ;
 }
 
 .w-\[80\%\] {
@@ -659,6 +667,11 @@ video {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
 .p-10 {
   padding: 2.5rem;
 }
@@ -700,6 +713,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -744,4 +762,23 @@ video {
 
 .outline {
   outline-style: solid;
+}
+
+@media (min-width: 640px) {
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }

@@ -42,8 +42,15 @@
             align-items: center;
         }
         .responsive {
-            background-color:cadetblue;
+            background-color: tomato;
             color: #fff;
+            font-size: 1.3em;
+        }
+    }
+    
+    @media (min-width: 1025px) {
+        .responsive {
+            font-size: 1.5em;
         }
     }
 
@@ -51,7 +58,7 @@
 
 <body>
     <div class="responsive">
-        This div changes the appearance based on the screen size.
+        This div changes it's appearance based on the screen size.
     </div>
 </body>
 

@@ -19,3 +19,12 @@ That means imagine that you are building a website for mobile and breakpoints us
 - sm: whatever styles you have provided in sm are going to apply to the above sm screens.
 - md: whatever styles you have provided in md are going to apply to the above md screens.
 - lg: whatever styles you have provided in lg are going to apply to the above lg screens.
+
+
+JS:
+Data types in JS: 
+1. Primitive:
+    String, boolean, number, null, undefined, symbol
+
+2. Non-primitive/Reference
+    array, objects, functions

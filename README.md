@@ -22,6 +22,8 @@ That means imagine that you are building a website for mobile and breakpoints us
 
 
 JS:
+Shift + Alt + A. :- for commenting a code or text more than one line.
+
 Data types in JS: 
 1. Primitive:
     String, boolean, number, null, undefined, symbol

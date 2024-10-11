@@ -8,7 +8,8 @@ let firstTea = teaFlavours[0];
 // console.log(`Name of the first tea flavour is "${firstTea}".`);
 
 
-/* 2. Declare an array named 'cities' containing "London", "Tokyo", "Paris" and "New York". Access the third element in the array and store it in a variable named 'favoriteCity'. */
+/* 2. Declare an array named 'cities' containing "London", "Tokyo", "Paris" and "New York".
+Access the third element in the array and store it in a variable named 'favoriteCity'. */
 const cities = new Array("London", "Tokyo", "Paris", "New York");
 
 const favoriteCity = cities[2];

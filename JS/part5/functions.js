@@ -34,4 +34,61 @@ const calculateTotal = (price, quantity) => {
 // const calculateTotal = (price, quantity) => price * quantity;
 
 const totalCost = calculateTotal(399, 9576);
-console.log(totalCost);
+// console.log(totalCost);
+
+
+/* 4. Write a function named "processTeaOrder" that takes another function, "makeTea" as a parameter and calls with the argument "earl grey".
+Return the result of calling "makeTea". */
+
+function makeTea(typeOfTea) {
+    return `maketea: ${typeOfTea}`
+}
+function processTeaOrder(teaFn) {
+    return teaFn("earl grey")
+}
+
+let order = processTeaOrder(makeTea);
+// console.log(order);
+
+
+/* 5. Write a function named "createTeaMaker" that returns another functions. The returned function should take another parameter "teaType" and return a message like "Making green tea!".
+Store the returned function in a variable named "teaMaker" and call it with "green tea". */
+
+
+
+function createTeaMaker() {
+    return function (teaType) {
+        return `"Making ${teaType}"`;
+    }
+}
+
+let teaMaker = createTeaMaker();
+// console.log(teaMaker);
+let result = teaMaker(("green tea"));
+// console.log(result);
+
+
+
+function whatAmI(input) {
+    const type = typeof(input);
+    return `"I'm a ${type}!"`
+}
+
+let ans = whatAmI("heelo");
+console.log(ans);
+
+function flipBoolean(input) {
+    const boolean = Boolean(input);
+    return !boolean ? true : false;
+}
+
+let val = flipBoolean(true);
+// console.log(val);
+
+
+function isItTruthy(input) {
+    return input ? "It's truthy!" : "It's falsey!";
+}
+
+let value = isItTruthy("heeloo");
+// console.log(value);

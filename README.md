@@ -30,3 +30,14 @@ Data types in JS:
 
 2. Non-primitive/Reference
     array, objects, functions
+
+
+Set(): It is a method in JS to remove duplicate values from an array and returns into a new one.
+
+map():
+filter():
+reduce():
+
+call():
+apply():
+bind():

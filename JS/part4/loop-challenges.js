@@ -51,7 +51,7 @@ do {
 
 /* 5. Write a "for" loop that multiplies each element in the array "[2,4,6] by 2 and stores the result in a new array named "multipleNumbers" */
 
-let num = [2,4,6];
+let num = [2, 4, 6];
 let multipleNumbers = [];
 
 for (let h = 0; h < num.length; h++) {
@@ -76,4 +76,4 @@ let cityList = [];
 for (let c = 0; c < cities.length; c++) {
     cityList.push(cities[c]);
 }
-console.log(cityList);
+console.log(cityList); 

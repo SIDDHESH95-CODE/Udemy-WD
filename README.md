@@ -32,7 +32,7 @@ Data types in JS:
     array, objects, functions
 
 
-Set(): It is a method in JS to remove duplicate values from an array and returns into a new one.
+Set(): It is a method in JS to remove duplicate values from an array/nested array and returns into a new one without duplication.
 
 map():
 filter():

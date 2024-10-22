@@ -46,3 +46,6 @@ bind():
 
 Prototype: (__proto__)
     Prototypes in JS are works as a default version of an object. You can declare or use these __proto__ object values in any other objects.
+
+this:
+    Directly declared 'this' inside a function, represents to a window object.

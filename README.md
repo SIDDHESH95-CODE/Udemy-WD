@@ -22,6 +22,8 @@ That means imagine that you are building a website for mobile and breakpoints us
 
 
 JS:
+JavaScript is an Prototype based language and not the object-oriented programming language.
+
 Shift + Alt + A. :- for commenting a code or text more than one line.
 
 Data types in JS: 
@@ -41,3 +43,6 @@ reduce():
 call():
 apply():
 bind():
+
+Prototype: (__proto__)
+    Prototypes in JS are works as a default version of an object. You can declare or use these __proto__ object values in any other objects.

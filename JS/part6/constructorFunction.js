@@ -25,7 +25,7 @@ function Car(maker, model) {
     this.model = model
 }
 
-let myCar1 = new Car("Porshe", "911 turbo S");
+let myCar1 = new Car("Porsche", "911 turbo S");
 // console.log(myCar1);
 
 let myCar2 = new Car("KIA", "Seltos")

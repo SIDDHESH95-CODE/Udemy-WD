@@ -34,10 +34,3 @@ let fullName = `${first} Peach`
 let sm1 = Symbol("Siddhesh");
 // console.log(sm1);
 
-const data = {
-    firstName: "Siddhesh",
-    lastName: "Gaonkar"
-}
-
-console.log(firstName);
-console.log(data.lastName);

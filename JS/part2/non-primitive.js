@@ -25,3 +25,12 @@ const arr = ["c", "b", "a", true, undefined, function abc() {
 }]
 console.log(arr);
 console.log(arr[5]);
+
+
+const data = {
+    "first name": "Siddhesh",
+    lastName: "Gaonkar"
+}
+
+console.log(data["first name"]);
+console.log(data.lastName);

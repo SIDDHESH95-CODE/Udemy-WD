@@ -39,5 +39,5 @@ const data = {
     lastName: "Gaonkar"
 }
 
-console.log(data.firstName);
+console.log(firstName);
 console.log(data.lastName);

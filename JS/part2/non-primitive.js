@@ -24,7 +24,7 @@ const arr = ["c", "b", "a", true, undefined, function abc() {
     console.log(arr);
 }]
 console.log(arr);
-console.log(arr[5]);
+console.log(arr[5]);f
 
 
 const data = {

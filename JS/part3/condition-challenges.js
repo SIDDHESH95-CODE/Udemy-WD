@@ -1,4 +1,5 @@
-// Check if a number is greater than another number:
+// 1. Check if a number is greater than another number:
+
 let num1 = 15;
 let num2 = 12;
 
@@ -11,7 +12,8 @@ if (num1 < num2) {
 }
 
 
-// Check if a string is equal to another string:
+// 2. Check if a string is equal to another string:
+
 let username = "josh";
 // let anotherUsername = "josh"
 let anotherUsername = "Paula"
@@ -23,17 +25,20 @@ if (username == anotherUsername) {
 }
 
 
-// Check if a variable is a number or not:
+// 3. Check if a variable is a number or not:
+
 let count = 33000;
 let str = "Hello";
 let isAdded = false
 
-if (typeof count) {
+if (typeof count === 'number') {
     console.log(`Provided variable value is a ${typeof count}.`);
 }
 
-if (typeof str) {
+if (typeof str === 'number') {
     console.log(`Provided variable value is a ${typeof str}.`);
+} else {
+    console.log("Provided value is not a number.");
 }
 
 if (typeof isAdded) {
@@ -41,7 +46,20 @@ if (typeof isAdded) {
 }
 
 
-// Check if an array is empty or not:
+
+// 5. Checking if a boolean value is true or false:
+
+let booValue = false;
+
+if (booValue) {
+    console.log("booValue is true");
+} else {
+    console.log("booValue is false");
+}
+
+
+// 5. Check if an array is empty or not:
+
 let arr = ["Hello"];
 
 if (arr.length == 0) {

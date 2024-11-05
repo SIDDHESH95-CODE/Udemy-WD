@@ -12,6 +12,7 @@ if (num1 < num2) {
 }
 
 
+
 // 2. Check if a string is equal to another string:
 
 let username = "josh";
@@ -23,6 +24,7 @@ if (username == anotherUsername) {
 } else {
     console.log("User created!");
 }
+
 
 
 // 3. Check if a variable is a number or not:
@@ -47,7 +49,7 @@ if (typeof isAdded) {
 
 
 
-// 5. Checking if a boolean value is true or false:
+// 4. Checking if a boolean value is true or false:
 
 let booValue = false;
 
@@ -56,6 +58,7 @@ if (booValue) {
 } else {
     console.log("booValue is false");
 }
+
 
 
 // 5. Check if an array is empty or not:
@@ -67,4 +70,3 @@ if (arr.length == 0) {
 } else {
     console.log("Your array is filled.");
 }
-

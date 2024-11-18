@@ -51,14 +51,14 @@
 //   let arrayFn = removeDuplicates([1, 2, 3, 3, 3, 4, 5]);
 //   console.log(arrayFn);
 
-// let i = 1;
-// let sum = 0
+/* let i = 1;
+let sum = 0
 
-// while (i <= 5) {
-//   sum += i;
-//   i++;
-// }
-// console.log(sum);
+while (i <= 5) {
+  sum += i;
+  i++;
+}
+console.log(sum); */
 
 /* let i = 5;
 let countDown = [];
@@ -69,18 +69,18 @@ while (i > 0) {
 }
 console.log(countDown); */
 
-// let teaCollection = []
-// let teaType;
+/* let teaCollection = []
+let teaType;
 
-// do {
-//   teaType = prompt("Your favorite tea type?");
+do {
+  teaType = prompt("Your favorite tea type?");
 
-//   if (teaType !== "stop") {
-//     teaCollection.push(teaType);
-//   }
-// } while (teaType !== "stop");
+  if (teaType !== "stop") {
+    teaCollection.push(teaType);
+  }
+} while (teaType !== "stop");
 
-// console.log(teaCollection);
+console.log(teaCollection); */
 
 /* let total = 0;
 let j = 1;
@@ -93,18 +93,18 @@ do {
 
 console.log(total); */
 
-// let num = [2, 4, 6];
-// let multipliedNum = [];
+/* let num = [2, 4, 6];
+let multipliedNum = [];
 
-// for (let i = 0; i < num.length; i++) {
-//   multipliedNum.push(num[i] * 2)
-// }
-// console.log(multipliedNum);
+for (let i = 0; i < num.length; i++) {
+  multipliedNum.push(num[i] * 2)
+}
+console.log(multipliedNum); */
 
 let cityList = [];
 let cities = ["Paris", "NewYork", "Tokyo", "London"];
 
 for (let i = 0; i < cities.length; i++) {
-  cityList.push(cities[i]);
+  cityList.unshift(cities[i]);
 }
 console.log(cityList);

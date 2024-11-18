@@ -70,3 +70,4 @@ if (arr.length == 0) {
 } else {
     console.log("Your array is filled.");
 }
+

@@ -69,13 +69,14 @@ hardCopyCities.pop();
 
 /* 8. You have two arrays: "europeanCities" containing "Paris", "Rome" and "asianCities" containing "Tokyo", "Bangkok".
 Merge these two array into a new array named "worldCities". */
-const europeanCities = ["Paris", "Rome"];
-const asianCities = ["Tokyo", "Bangkok"];
+let europeanCities = ["Paris", "Rome"];
+let asianCities = ["Tokyo", "Bangkok"];
+let westernCities = ["France", "Belgium"]
 
-// const worldCities = europeanCities + asianCities;
-const worldCities = europeanCities.concat(asianCities);
+let worldCities = europeanCities.concat(asianCities, westernCities);
+
 // console.log(worldCities);
-// console.log(typeof worldCities);
+
 
 
 /* 9. You have an array named "teaMenu" containing "masala chai", "oolong tea", "green tea", "earl grey".

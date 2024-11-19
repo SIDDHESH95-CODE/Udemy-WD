@@ -101,10 +101,67 @@ for (let i = 0; i < num.length; i++) {
 }
 console.log(multipliedNum); */
 
-let cityList = [];
+/* let cityList = [];
 let cities = ["Paris", "NewYork", "Tokyo", "London"];
 
 for (let i = 0; i < cities.length; i++) {
   cityList.unshift(cities[i]);
 }
-console.log(cityList);
+console.log(cityList); */
+
+
+/* let teas = ["green tea", "black tea", "chai", "oolong tea"];
+let selectedTeas = [];
+
+for (let t = 0; t < teas.length; t++) {
+
+  if (teas[t] === "chai") {
+    break;
+  }
+  selectedTeas.push(teas[t]);
+}
+console.log(selectedTeas); */
+
+
+/* let cities = ["London", "New York", "Paris", "Berlin"];
+let visitedCities = [];
+
+for (let c = 0; c < cities.length; c++) {
+  if (cities[c] === "Paris") {
+    continue;
+  }
+  visitedCities.push(cities[c]);
+}
+
+console.log(visitedCities); */
+
+
+/* let numbers = [1, 2, 3, 4, 5];
+let smallNumbers = [];
+
+for (const num of numbers) {
+  // console.log(element);
+  if (num == 4) {
+    break;
+  }
+  smallNumbers.push(num);
+}
+console.log(smallNumbers); */
+
+
+let cityPopulation = {}
+let citiesPopulation = {
+  "London": 890000,
+  "New York": 8400000,
+  "Paris": 2200000,
+  "Berlin": 3500000
+}
+
+for (const city in citiesPopulation) {
+  if (city === "Berlin") {
+    break;
+  }
+
+  // console.log(city);
+}
+

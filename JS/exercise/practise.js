@@ -165,3 +165,28 @@ for (const city in citiesPopulation) {
   // console.log(city);
 }
 
+function orderTea(teaType) {
+  function confirmOrder() {
+    return `Order confirmed for ${teaType}!`
+  }
+  return confirmOrder();
+}
+
+/* let tea = orderTea("pizza");
+console.log(tea); */
+
+// const calculateTotal = (price, quantity) => {
+//   return price * quantity
+// }
+
+const calculateTotal = (price, quantity) => price * quantity;
+
+let totalCost = calculateTotal(399, 16426);
+// console.log(totalCost);
+
+
+function processTeaOrder() {
+  function makeTea() {
+     
+  }
+}

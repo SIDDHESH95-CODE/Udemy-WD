@@ -185,8 +185,152 @@ let totalCost = calculateTotal(399, 16426);
 // console.log(totalCost);
 
 
-function processTeaOrder() {
-  function makeTea() {
-     
+function makeTea(teaOrder) {
+  return `MakeTea: ${teaOrder}`
+}
+
+function processTeaOrder(teaFn) {
+  return teaFn("Earl Grey")
+}
+
+// let order = processTeaOrder(makeTea);
+// console.log(order);
+
+
+/* function teaType(typeFn) {
+  return `${typeFn}: green tea`;
+}
+
+
+function createTeaMaker(makeFn) {
+  return makeFn("Making tea")
+}
+
+let teaOrder = createTeaMaker(teaType)
+console.log(teaOrder); */
+
+
+function createTeaMaker() {
+  return function (teaType) {
+    return `Making ${teaType}!`
   }
 }
+
+let teaOrder = createTeaMaker();
+let order = teaOrder("green tea");
+// console.log(order);
+
+
+function sumOfN(n) {
+  return n * (n + 1) / 2;
+}
+
+let total = sumOfN(10);
+// console.log(total);
+
+
+function printMultiplicationTable(n) {
+  let table = [];
+  for (let i = 1; i <= 10; i++) {
+    let result = n * i;
+    table.push(`${n} * ${i} = ${result}`);
+  }
+  return table;
+}
+
+let tableFn = printMultiplicationTable(2);
+// console.log(tableFn);
+
+
+function countVowels(str) {
+  const vowels = "aeiouAEIOU";
+
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      count++;
+    }
+  }
+  return count;
+}
+
+let word1 = countVowels("Hello World");
+let word2 = countVowels("aeoiu");
+// console.log(word2);
+
+
+// All the following tasks must be strictly be writtern in arrow functions only.
+
+// Write a function squareNumbers(arr) using map() and arrow functions
+
+let squareNumbers = (arr) => arr.map((num) => num * num);
+
+// Create a function filterEvenNumbers(arr) using filter() and arrow functions
+
+// Write a function sumPositiveNumbers(arr) that takes an array of numbers and returns the sum of all positive numbers using filter() and reduce() with arrow functions
+
+let sumPositiveNumbers = (arr) => arr.filter((num) => num > 0).reduce((acc, num) => acc + num, 0);
+
+let arr = [
+  {
+    name: "John",
+  }, {
+    age: 30,
+  }, {
+    city: "New York"
+  }
+]
+
+let getNames = (arr) => (arr.map((elem) => elem.name));
+// console.log(getNames(arr));
+
+// Write a function getNames(arr) that takes an array of objects where each object has a name property, and returns an array of just the names using map() and arrow functions
+
+
+// const findLongestWord = (words) => words.map(word => word.length).reduce((acc, word) => );
+
+// console.log(findLongestWord(words));
+
+// console.log(words[0].length);
+
+// Write a function findLongestWord(arr) that takes an array of strings and returns the longest word using reduce() and an arrow function
+
+const words = ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipisicing", "elit", "Deserunt", "voluptate", "illo", "ipsam"];
+
+const findLongestWord = (words) => words.reduce((acc, word) => word.length > acc.length ? word : acc, "");
+
+// console.log(findLongestWord(words));
+
+function outer() {
+  function inner() {
+    return "Inner function called";
+  }
+  return inner();
+}
+
+// console.log(outer());
+
+
+const numbers = [1, 2, 2, 3, 4, 4, 5];
+// let newSet;
+
+const removeDuplicates = (numbers) => {
+  let num = new Set(numbers);
+  return [...num];
+}
+
+// console.log(removeDuplicates(numbers));
+
+
+let computer = { cpu: 12 };
+
+let lenovo = {
+  screen: "Full HD",
+  __proto__: computer
+}
+
+Object.setPrototypeOf(computer, lenovo);
+
+console.log(lenovo);
+

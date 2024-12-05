@@ -40,6 +40,15 @@ map():
 filter():
 reduce():
 
+this:   a value that can be change at any point of time.
+    -global: window
+    -function: window
+    -method: object
+    -fnc inside method(es5): window
+    -fnc inside method(es6): object
+    -constructor fnc: new blank object
+    -event listener fnc: that element
+
 call():
 apply():
 bind():

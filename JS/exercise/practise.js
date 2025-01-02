@@ -330,7 +330,9 @@ let lenovo = {
   __proto__: computer
 }
 
-Object.setPrototypeOf(computer, lenovo);
+// Object.setPrototypeOf(computer, lenovo);
 
-console.log(lenovo);
+// console.log(lenovo);
+
+console.log(this);
 

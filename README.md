@@ -26,6 +26,24 @@ JavaScript is an Prototype based language and not the object-oriented programmin
 
 Shift + Alt + A. :- for commenting a code or text more than one line.
 
+Basics:
+    Inbuilt features
+    Variable constants
+    Compilers and interpreters
+    Window
+    Types
+    Conditionals
+    Loops
+    Functions
+    Arrays
+    Objects
+
+Advance:
+    Prototypes
+    Prototypal inheritance
+    Asynchronous
+
+
 Data types in JS: 
 1. Primitive:
     String, boolean, number, null, undefined, symbol
@@ -48,6 +66,7 @@ this:   a value that can be change at any point of time.
     -fnc inside method(es6): object
     -constructor fnc: new blank object
     -event listener fnc: that element
+Directly declared 'this' inside a function, represents to a window object.
 
 call():
 apply():
@@ -56,5 +75,3 @@ bind():
 Prototype: (__proto__)
     Prototypes in JS are works as a default version of an object. You can declare or use these __proto__ object values in any other objects.
 
-this:
-    Directly declared 'this' inside a function, represents to a window object.

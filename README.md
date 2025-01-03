@@ -8,6 +8,7 @@ ARIA
 Accessible Rich Internet Applications (ARIA) is a set of roles and attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 
 
+CSS:
 There are 3 types of methods for writing CSS:
 1. Inline style
 2. Style tag
@@ -24,32 +25,59 @@ That means imagine that you are building a website for mobile and breakpoints us
 JS:
 JavaScript is an Prototype based language and not the object-oriented programming language.
 
-Shift + Alt + A. :- for commenting a code or text more than one line.
+Shift + Alt + A :- for commenting a code or text more than one line.
 
-Basics:
-    Inbuilt features
-    Variable constants
-    Compilers and interpreters
-    Window
-    Types
-    Conditionals
-    Loops
-    Functions
+<!-- Basics -->
+- Inbuilt features:
+    console.log(), console.alert(), console.warn(), prompt(), alert(), etc..
+- Variable constants:
+    var, let, const
+    let: block scope, re-assignable
+    const: block scope, un-assignable
+    Hoisting: var is hoisted to the top of the function, let and const are hoisted to the top of the block.
+    The values of the variables and constants are stored in heap memory by the browser so they can be used at anywhere.
+- Compilers and interpreters:
+    Interpreters run the code faster than the compiler but executes the code slower than the compiler.
+- Window:
+    Window objects are not part of the JS engine like console.log(), prompt(), alert(), they are not part of the JS instead they are the part of the browser.
+- Types:
+    - Primitive:
+        String, boolean, number, float, null, undefined, symbol
+    - Non-primitive/Reference:
+        array, objects, functions
+- Conditionals:
+    if, if else
+    falsy values: null, undefined, "", '', NaN, 0, document.all(), false
+    truthy values: Other than falsy values all values are considered truthy.
+- Loops: Repeat
+    - Important:
+        for: for(START; END; CHANGE){
+
+        }
+        forEach:
+    - Unimportant
+        do-while: do START;
+                while(END){
+                    CHANGE
+                }
+        while: while(end){
+                CHANGE
+            }
+        do-while, forof, forin
+
+
+<!-- Intermediate -->
+    Functions:
+        Normal ES5 function, ES6 arrow function, arrow function with return.
     Arrays
     Objects
 
-Advance:
+<!-- Advance -->
     Prototypes
     Prototypal inheritance
     Asynchronous
 
 
-Data types in JS: 
-1. Primitive:
-    String, boolean, number, null, undefined, symbol
-
-2. Non-primitive/Reference
-    array, objects, functions
 
 
 Set(): It is a method in JS to remove duplicate values from an array/nested array and returns into a new one without duplication.

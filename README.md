@@ -68,9 +68,27 @@ Shift + Alt + A :- for commenting a code or text more than one line.
 
 <!-- Intermediate -->
     Functions:
-        Normal ES5 function, ES6 arrow function, arrow function with return.
+        function abc(){
+            // function statement
+        }
+        var abc = function(){
+            // function expression
+        }
+        function(){
+            // anonymous function
+        }
+        var abc = () => {
+            // arrow function
+        }
+        var abc = a => {
+            // arrow function with one parameter
+        }
+        var abc = (a) => {
+            return "hello"; /aUIO
+            // arrow function with implicit return
+        }
     Arrays
-    Objects
+    Objects 
 
 <!-- Advance -->
     Prototypes

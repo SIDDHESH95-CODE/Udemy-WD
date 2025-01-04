@@ -87,10 +87,86 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             return "hello"; /aUIO
             // arrow function with implicit return
         }
-    Arrays
-    Objects 
+
+    Arrays:
+        var arr = [1, 2, 3, 4, 5];
+        // array with loop:
+            arr.forEach((val) => {
+                console.log(val)
+            })
+
+    Objects:
+        Objects are nothing but to store the many details of single element inside a variable and to fetch them.
+        let obj = {
+            name: "John",
+            surname: "Doe",
+            rank: 166
+            country: "UK"
+        }
+
+    // Off the topic:
+    undefined is a value.
+    not defined is an error.
+    null is also a value.
+
+    Synchronous and Asynchronous:
+        Synchronous code runs line by line.
+        Asynchronous code runs after all the Synchronous code executed.
 
 <!-- Advance -->
+    this:
+        this has a different value in different conditions as follows;
+        -global: window
+            // console.log(this);
+
+        -function: window
+            // function abcd() {
+                console.log(this);
+            }
+            abcd();
+
+        -method: method means a function declared inside an object.
+                 that object.
+            // const obj = {
+                name: function(){
+                    console.log(this);
+                }
+            }
+            obj.name();
+
+        -fnc inside method(es5): window
+            // const obj2 = {
+                sayName: function(){
+                    function def(){
+                        console.log(this);
+                    }
+                    def();
+                }
+            }
+            obj2.sayName();
+
+        -fnc inside method(es6): that object.
+            // const obj3 = {
+                age: function(){
+                    const name = () => {
+                        console.log(this);
+                    }
+                    name();
+                }
+            }
+            obj3.age();
+        -constructor function: new blank object.
+            // function hello() {
+                console.log(this);
+            }
+            const greet = new hello();
+
+        -event listener: that element which has event listener is fired on.
+            document.querySelector("button").addEventListener("click", () => {
+                console.log(this);
+            })
+
+         call apply bind
     Prototypes
     Prototypal inheritance
     Asynchronous

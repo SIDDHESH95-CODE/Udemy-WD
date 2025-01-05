@@ -166,9 +166,39 @@ Shift + Alt + A :- for commenting a code or text more than one line.
                 console.log(this);
             })
 
-         call apply bind
-    Prototypes
-    Prototypal inheritance
+        call: by using 'call' method you can change the value of 'this' inside a function by declaring its name, it will give output in object form.
+            // let obj = { name: "Tony" };
+            function abc(){
+                console.log(this);
+            }
+            abc.call(obj);  OR abc.call(12);
+
+        apply: same as 'call' but it takes an array as a arguments while declaring the parameters for the function.
+            // let obj = { name: "Kat" };
+            function abc(a, b) {
+                console.log(this, a + b);
+
+            }
+            abc.apply(obj, [2, 4])
+         
+         
+        bind: same as 'call' but it 'bind' returns a function after it called.
+            // let obj = { name: "Javascript" };
+            function abc() {
+                console.log(this);
+            }
+            let returnedFnc = abc.bind(obj);
+            returnedFnc();
+
+    Constructor Function: A function which uses 'this' OR without 'this'keyword and make new objects with the help of 'new' keyword then that function is called as Constructor function.
+        //function human(){
+
+        }
+        new human();
+    It returns a blank object.
+
+
+    Prototypal inheritance:
     Asynchronous
 
 

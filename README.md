@@ -125,8 +125,8 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             }
             abcd();
 
-        -method: method means a function declared inside an object.
-                 that object.
+        -method: that object.
+                 method means a function declared inside an object.
             // const obj = {
                 name: function(){
                     console.log(this);
@@ -166,14 +166,16 @@ Shift + Alt + A :- for commenting a code or text more than one line.
                 console.log(this);
             })
 
-        call: by using 'call' method you can change the value of 'this' inside a function by declaring its name, it will give output in object form.
+    call: 
+        by using 'call' method you can change the value of 'this' inside a function by declaring its name, it will give output in object form.
             // let obj = { name: "Tony" };
             function abc(){
                 console.log(this);
             }
             abc.call(obj);  OR abc.call(12);
 
-        apply: same as 'call' but it takes an array as a arguments while declaring the parameters for the function.
+    apply: 
+        same as 'call' but it takes an array as a arguments while declaring the parameters for the function.
             // let obj = { name: "Kat" };
             function abc(a, b) {
                 console.log(this, a + b);
@@ -182,7 +184,8 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             abc.apply(obj, [2, 4])
          
          
-        bind: same as 'call' but it 'bind' returns a function after it called.
+    bind: 
+        same as 'call' but it 'bind' returns a function after it called.
             // let obj = { name: "Javascript" };
             function abc() {
                 console.log(this);
@@ -199,6 +202,37 @@ Shift + Alt + A :- for commenting a code or text more than one line.
 
 
     Prototypal inheritance:
+        Parent function is basically means the schema you required to make an object.
+        If you provide default value inside parent function then it will use more data, speed & storage every time you run the child function. So to overcome that you push that default value inside a prototype and then you can access that inside a child function.
+        // function makeHuman(name, age){
+            this.name = name;
+            this.age = age;
+            }
+            
+            makeHuman.prototype.printMyName = function(){
+                console.log(this.name);
+            }
+            makeHuman.prototype.category = "employee";
+
+            const human1 = new makeHuman("Boy", 28);
+            const human2 = new makeHuman("Girl", 24);
+
+            console.log(human1.printMyName());
+            console.log(human1.category);
+            console.log(human2.printMyName());
+            console.log(human2.category);
+
+    Closures:
+        Closures are nothing but a function that returns another function and can access the value from its outer lexical scope.
+            // function abc(){
+                let a = 32;
+                return function(){
+                    console.log(a);
+                }
+            }
+            let ans = abc();
+            console.log(ans());
+            
     Asynchronous
 
 

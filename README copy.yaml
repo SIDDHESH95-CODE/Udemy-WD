@@ -186,7 +186,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
          
          
     bind: 
-        same as 'call' but it 'bind' returns a function after it called.
+        same as 'call' but 'bind' returns a function after it called.
             // let obj = { name: "Javascript" };
             function abc() {
                 console.log(this);
@@ -204,7 +204,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
 
     Prototypal inheritance:
         Parent function is basically means the schema you required to make an object.
-        If you provide default value inside parent function then it will use more data, speed & storage every time you run the child function. So to overcome that you push that default value inside a prototype and then you can access that inside a child function.
+        If you provide default value inside parent function then it will use more data, speed & storage every time you run the child function. So to overcome that you push that default value inside a prototype and then you can access that inside a child function anywhere & anytime.
         // function makeHuman(name, age){
             this.name = name;
             this.age = age;

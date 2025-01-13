@@ -223,7 +223,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             console.log(human2.category);
 
     Closures:
-        Closures are nothing but a function that returns another function and can access the value from its outer lexical scope.
+        Closures are nothing but a function that returns another function and access the value from its outer lexical scope.
             // function abc(){
                 let a = 32;
                 return function(){
@@ -232,7 +232,13 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             }
             let ans = abc();
             console.log(ans());
-            
+
+    Event Bubbling:
+    Event Delegation:
+    Higher-order-function (hof):
+    try & catch:
+
+
     Asynchronous
 
 

@@ -113,7 +113,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
         Synchronous code runs line by line.
         Asynchronous code runs after all the Synchronous code executed.
 
-<!-- Advance -->
+# <!-- Advance -->
     this:
         this has a different value in different conditions as follows;
         -global: window
@@ -240,10 +240,6 @@ Shift + Alt + A :- for commenting a code or text more than one line.
     try & catch:
 
 
-    Asynchronous
-
-
-
 
 Set(): It is a method in JS to remove duplicate values from an array/nested array and returns into a new one without duplication.
 
@@ -261,10 +257,31 @@ this:   a value that can be change at any point of time.
     -event listener fnc: that element
 Directly declared 'this' inside a function, represents to a window object.
 
-call():
-apply():
-bind():
-
 Prototype: (__proto__)
     Prototypes in JS are works as a default version of an object. You can declare or use these __proto__ object values in any other objects.
 
+
+# <-- Asynchronous JS -->
+    setTimeout: 
+        setTimeout is function which takes 2 values,
+        1st is the function that will be called and 
+        2nd is the time in milliseconds after which the function will be called.
+            // setTimeout(() => {
+                console.log("Hello!");
+               }, 2000)
+
+    setInterval:
+        setInterval is same as setTimeout but setTimeout functions runs only  once after the timer expires but setInterval functions runs in the interval of the timer expires.
+            // let interval = setInterval(() => {
+                console.log("Hello!");
+               }, 2000);
+
+        You can stop the setInterval function with the help of clearInterval() fnc.
+            // clearInterval(interval);
+
+            
+    fetch API:
+    Axios
+    
+    
+    async/await

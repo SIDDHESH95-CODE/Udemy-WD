@@ -209,7 +209,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             this.name = name;
             this.age = age;
             }
-            
+               
             makeHuman.prototype.printMyName = function(){
                 console.log(this.name);
             }

@@ -279,9 +279,72 @@ Prototype: (__proto__)
         You can stop the setInterval function with the help of clearInterval() fnc.
             // clearInterval(interval);
 
-            
+
     fetch API:
-    Axios
+        fetch in JS helps to get data from the outside or helps to post some data on the outside server,
+        but the data we get from the outside server aren't going to be in readable form so 1st convert that data into json format using .then method and use that data to display or perform any action using again .then function.
+            // fetch(`https://randomuser.me/api/`)
+                .then(res => res.json())
+                .then(data => console.log(data.results[0].name))
+
+
+    Axios:
+        Axios works same as fetch in JS but axios is an third-party package so you have to install to using 'npm i axios' or else use the script tag in html index file.
+        Benefit of axios is we can use .then only once and we get our results using axios.get() while in 'fetch' you have to use .then 2 times to convert the raw data into json format and then to get the results.
+        just like axios.get(), you can use axios.post() to post your data.
+
+        // const axios = require(axios);
+
+             axios.get(`https://randomuser.me/api/`)
+                .then((results) => console.log(results))
+
+
+    Promises: 
+        Promises are nothing but a asynchronous function which states only 2 things. Promise will either resolve() or reject() so according to that you have to run your code.
+
+            let userGender =  new Promise((resolve, reject) => {
+                fetch(`https://randomuser.me/api/`)
+                .then(raw => raw.json())
+                .then(data => {
+                    // console.log(data.results[0].gender);
+                    if (data.results[0].gender === "female") resolve();
+                    else reject();
+                })
+            });
+ 
+            userGender
+            .then(() => console.log("User is a female!"))
+            .catch(() => console.log("User is NOT a female!"));
+
+
+    Callback function in an async code:
+        callback function is a function which you can declare it inside a async which will run after the asynchronous code execution is done.
+
+        callback fnc takes 2 values i.e. 1st is var or URL and 2nd es5/es6 fnc  
+        which usually named by "callback" OR "cb".
+            // function data(url, callback) {
+                fetch(url)
+                .then(raw => raw.json())
+                .then(response => callback(response))
+                }
+
+            data("https://randomuser.me/api/", function (response) {
+                console.log(response.results[0].email)
+            });
     
-    
-    async/await
+
+    Async/await:
+        If you wan to run async code before the synchronous code then thats when the async/await comes up.
+        Always use async on the await's parent function.
+
+        // async function Hello() {
+            let a = await fetch("https://randomuser.me/api/")
+            a = await a.json()
+            console.log(a.results[0].name)
+            }
+
+            Hello();
+
+
+    Event Loop:
+        

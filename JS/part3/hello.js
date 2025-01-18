@@ -1,5 +1,5 @@
 
-const axios = require('axios');
+// const axios = require('axios');
 
 /* fetch(`https://randomuser.me/api/`)
 .then(res => res.json())
@@ -83,7 +83,7 @@ async function user() {
 user(); */
 
 
-function* hello() {
+/* function* hello() {
     console.log("Hello");
     yield;
     console.log("World");
@@ -92,7 +92,14 @@ function* hello() {
     let generator = hello();
     generator.next();
     generator.next();
-    generator.next();  // output: undefined
+    generator.next();  // output: undefined */
+
+
+    let btn = document.querySelector('button');
+    // let btn = document.querySelector('.btn');
+    // let btn = document.querySelector('#btn');
+
+btn.onclick(() => alert("Hello"))
 
 
 

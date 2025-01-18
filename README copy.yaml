@@ -235,7 +235,14 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             console.log(ans());
 
     Event Bubbling:
+    Event Bubbling is a way in which an event is propagated from a deeply nested element up to the top-level document object.
+
+    
+
     Event Delegation:
+
+
+
     Higher-order-function (hof):
     try & catch:
 
@@ -365,5 +372,22 @@ Prototype: (__proto__)
             generator.next();
             generator.next();  // output- undefined
 
-            
+
     Web workers:
+
+
+    # <-- DOM -->
+    Document Object Model (DOM) is a an interface for HTML and XML documents. It represents the structure of a document, and it provides methods for accessing and manipulating the document.
+
+    DOM Manipulation:
+        DOM Manipulation in simple words means manipulating or making changes to the HTML document by an external script tags.
+        Eg. Clicking on a button will cause some changes on the page.
+
+    Accessing Elements:
+        Selection:
+            # Tag Selection:
+            let btn = document.querySelector('button');
+            # Class Selection:
+            let btn = document.querySelector('.btn');
+            # Id Selection:
+            let btn = document.querySelector('#btn');

@@ -391,3 +391,43 @@ Prototype: (__proto__)
             let btn = document.querySelector('.btn');
             # Id Selection:
             let btn = document.querySelector('#btn');
+
+    Modifying Elements:
+        .innerHTML, .textContent
+            // h1.innerHTML = "<i>Hello</i>"
+            // h1.textContent = "Hello"
+            // h1.textContent += "World"
+
+    Styling Elements:
+        h1.style.color = "red";
+        h1.style.font-family = "gilroy";
+        # adding a class to an html tag through JS.
+        h1.classList.add("header");
+        # Removing a class from an html tag through JS.
+        h1.classList.remove("header");
+
+    Creating & Deleting Elements:
+        .createElement()
+            // body.createElement("h1");
+
+        .appendChild()
+            // body.appendChild("h1");
+
+        .removeChild()
+            // body.removeChild("h1");
+
+    Event Handling:
+        It's a function which takes 2 values, 1st is eventListener name and 2nd is the function which will run once the event is fires.
+        .eventListener()
+            // btn.addEventListener('click', () => {
+                alert("Hello..")
+            })
+
+        You can track mouse movement on your webpage using 'mousemove' event.
+            // body.addEventListener("mousemove", (details) => {
+                console.log(details);
+                console.log(details.clientX);
+                console.log(details.clientX, details.clientY);
+
+
+     

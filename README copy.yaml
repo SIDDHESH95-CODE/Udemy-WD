@@ -347,4 +347,8 @@ Prototype: (__proto__)
 
 
     Event Loop:
-        
+        Event loop is nothing but an event who checks if the main stack is empty or not. Once all the main stack code runs then all the side stack code will be executed.
+
+
+    Generators:
+    Web workers:

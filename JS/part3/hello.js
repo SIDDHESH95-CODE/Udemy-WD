@@ -36,10 +36,63 @@ data("https://randomuser.me/api/", function (response) {
     console.log(response.results[0].email)
 }) */
 
-    async function Hello() {
+/*     async function Hello() {
         let a = await fetch("https://randomuser.me/api/")
         a = await a.json()
         console.log(a.results[0].name)
     }
 
-    Hello();
+    Hello(); */
+
+
+
+/* function data(url, callback) {
+    fetch(url)
+    .then(raw => raw.json())
+    .then(response => callback(response))
+}
+
+data("https://randomuser.me/api/", (response) => {
+    console.log(response.results[0].name);
+})
+
+
+
+let userGender = new Promise((resolve, reject) => {
+    fetch(`https://randomuser.me/api/`)
+    .then(raw => raw.json())
+    .then((data) => {
+        if(data.results[0].gender === "male") resolve()
+            else reject()
+    })
+})
+
+userGender
+.then(() => console.log("User is a male!"))
+.catch(() => console.log("User is NOT a male!"))
+
+
+
+
+async function user() {
+    let a = await fetch("https://randomuser.me/api/");
+    a = await a.json()
+    console.log(a.results[0].name);
+}
+
+user(); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

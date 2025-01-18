@@ -351,4 +351,19 @@ Prototype: (__proto__)
 
 
     Generators:
+        Generators are functions which can pause and resume. They can be paused by using 'yield' keyword and resumed by using 'next' keyword.
+        They are differentiate by asterisk(*) symbol.
+
+        // function* hello() {
+            console.log("Hello");
+            yield;
+            console.log("World");
+            }
+
+            let generator = hello();
+            generator.next();
+            generator.next();
+            generator.next();  // output- undefined
+
+            
     Web workers:

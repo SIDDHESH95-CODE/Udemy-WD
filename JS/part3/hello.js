@@ -83,7 +83,16 @@ async function user() {
 user(); */
 
 
+function* hello() {
+    console.log("Hello");
+    yield;
+    console.log("World");
+    }
 
+    let generator = hello();
+    generator.next();
+    generator.next();
+    generator.next();  // output: undefined
 
 
 

@@ -408,7 +408,7 @@ Prototype: (__proto__)
 
     Creating & Deleting Elements:
         .createElement()
-            // body.createElement("h1");
+            // document.createElement("h1");
 
         .appendChild()
             // body.appendChild("h1");

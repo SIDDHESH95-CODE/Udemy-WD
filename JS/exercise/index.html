@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            height: 1200px;
-        }
-    </style>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
 </head>
 <body>
     <!-- <button style="cursor: pointer;" class="btn" >Click Me</button>
@@ -58,6 +55,23 @@
         
     </div> -->
 
+    <div class="w-full h-screen bg-black p-10">
+         <div class="parent flex">
+            <div class="card w-52 bg-zinc-700 pr-2 pl-5 pt-4 pb-4 rounded-lg text-white">
+                <div class="img p-1 bg-zinc-400 w-18 h-18 rounded-full overflow-hidden">
+                    <img src=$${picture.medium} alt="image not available" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-2xl font-semibold">${name.first}</h1>
+                <div class="personal mt-2 flex justify-between w-[90%]">
+                    <h4 class="text-xs opacity-40">${gender}</h4>
+                    <h4 class="text-xs opacity-40">Age ${dob.age}</h4>
+                </div>
+                <h4 class="text-xs opacity-40">${email}</h4>
+                <p class="text-sm opacity-70 leading-4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque expedita id fuga.</p>
+            </div>
+         </div>
+        
+    </div>
     
     <script src="hello.js"></script>
 </body>

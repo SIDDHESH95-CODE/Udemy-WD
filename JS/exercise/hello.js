@@ -103,40 +103,40 @@ user(); */
         alert("Hello..")
     }) */
 
-    // let body = document.querySelector("body");
+// let body = document.querySelector("body");
 
-    // body.addEventListener("mousemove", (details) => {
-        // console.log(details);
-        // console.log(details.clientX);
-        // console.log(details.clientX, details.clientY);
-    // })
+// body.addEventListener("mousemove", (details) => {
+// console.log(details);
+// console.log(details.clientX);
+// console.log(details.clientX, details.clientY);
+// })
 
 
-let btn = document.querySelector(".btn");
-let swap = document.querySelector(".swap");
-let h1 = document.querySelector("h1");
-let img1 = document.querySelector(".img1");
-let img2 = document.querySelector(".img2");
+// let btn = document.querySelector(".btn");
+// let swap = document.querySelector(".swap");
+// let h1 = document.querySelector("h1");
+// let img1 = document.querySelector(".img1");
+// let img2 = document.querySelector(".img2");
 // let src1 = img1.src;
 // let src2 = img2.src;
-let inputText = document.querySelector("#name");
-let formSubmit = document.querySelector("#submit");
-let ul = document.querySelector("ul");
-let addList = document.querySelector("#add");
-let removeList = document.querySelector("#add");
-let timerDisplay = document.querySelector("#timer");
+// let inputText = document.querySelector("#name");
+// let formSubmit = document.querySelector("#submit");
+// let ul = document.querySelector("ul");
+// let addList = document.querySelector("#add");
+// let removeList = document.querySelector("#add");
+// let timerDisplay = document.querySelector("#timer");
 // console.log(addList);
 
 /* btn.addEventListener("click", () => {
     h1.textContent = "Greetings.."
     }) */
-   
-   
-   /*     swap.addEventListener('click', () => {
-    img1.src = src2
-    img2.src = src1
-    }) */
-   
+
+
+/*     swap.addEventListener('click', () => {
+ img1.src = src2
+ img2.src = src1
+ }) */
+
 /*    formSubmit.addEventListener("click", (evt) => {
        evt.preventDefault();
        if (inputText.value === "") alert("Input is invalid");
@@ -183,3 +183,14 @@ let aboutSection = document.querySelector(".about"); */
     console.log(scrlY);
 }) */
 
+let parent = document.querySelector(".parent");
+let card = document.querySelector(".card");
+
+fetch("https://randomuser.me/api/")
+    .then(raw => raw.json())
+    .then(data => {
+        const {picture, gender, name, email, dob} = data.results[0];
+        // console.log(gender, name.first, name.last, email);
+        // console.log(data.results[0].dob.age);
+         parent.textContent += "HEY";
+    })

@@ -51,6 +51,14 @@ function info() {
 }
 
 4. Blocking scroll until something happens:
-  
+  // scrollBtn.addEventListener("click", () => {
+    document.body.classList.toggle("overflow-hidden")
+})
 
 5. Custom tooltip:
+  // tooltipBtn.addEventListener("mouseenter", () =>{
+    tooltipText.style.display = "initial";    
+})
+tooltipBtn.addEventListener("mouseleave", () =>{
+    tooltipText.style.display = "none";    
+})

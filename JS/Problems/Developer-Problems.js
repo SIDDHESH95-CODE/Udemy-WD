@@ -27,11 +27,11 @@ let cards = document.querySelector(".cards");
 
 /* ------------------------------ */
 
-let blockUser = document.querySelector("#block");
+/* let blockUser = document.querySelector("#block");
 let unblockUser = document.querySelector("#unblock");
-let userInfo = document.querySelector("h1 span")
+let userInfo = document.querySelector("h1 span") */
 
-blockUser.addEventListener("click", () => {
+/* blockUser.addEventListener("click", () => {
     localStorage.setItem("block", true);
     info();
 })
@@ -45,4 +45,23 @@ function info() {
         userInfo.textContent = "Blocked"
     }
     else userInfo.textContent = "Unblocked"
-}
+} */
+
+
+/* let scrollBtn = document.querySelector("#scrollBtn");
+
+scrollBtn.addEventListener("click", () => {
+    document.body.classList.toggle("overflow-hidden")
+}) */
+
+
+let tooltipBtn = document.querySelector("#tooltipBtn");
+let tooltipText = document.querySelector("#tooltipText");
+
+tooltipBtn.addEventListener("mouseenter", () =>{
+    tooltipText.style.display = "initial";    
+})
+tooltipBtn.addEventListener("mouseleave", () =>{
+    tooltipText.style.display = "none";    
+})
+// console.log("toopltip");

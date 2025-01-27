@@ -1,0 +1,56 @@
+Developer Problems:
+
+1. Debugging a typeError: Cannot read property 'name' of undefined
+  // this error occurs when you are searching for a value inside an object and if that value is not present inside that object.
+  If it is not sure the particular value inside an object is present or not, just add ? 
+  // let obj = {};
+  obj?.name?.age
+  // Debugging a typeError will not show if used ? symbol.
+
+
+2. Handling Asynchronous Operations:
+  Get random user data on button clicked.
+  // userBtn.addEventListener("click", () => {
+    newUser();
+  })
+
+  let newUser = () => {
+    fetch("https://randomuser.me/api/")
+    .then(raw => raw.json())
+    .then(data => {
+        console.log(data.results[0]);
+        const { name, gender, email, picture } = data.results[0];
+        cards.innerHTML += `<div class="card w-50 bg-zinc-600 py-5 px-4 text-white rounded-lg">
+                <img src=${picture.large} alt="" class="w-20 h-20 object-cover rounded-sm bg-zinc-500 overflow-hidden">
+                <h1 class="font-semibold text-xl mt-2">${name.first + " " + name.last}</h1>
+                <h4 class="text-sm opacity-60 mt-2">${gender}</h4>
+                <h4 class="text-xs opacity-60 w-[95%] overflow-hidden">${email}</h4>
+                <p class="text-xs opacity-80 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus amet ratione eius dolorum sed explicabo!</p>
+            </div>`
+    })
+}
+
+
+3. Working with Local storage:
+  localStorage helps you to add, remove & store values inside your browser.
+  And it will not remove even though the browser is reloaded.
+  // blockUser.addEventListener("click", () => {
+    localStorage.setItem("block", true);
+    info();
+})
+unblockUser.addEventListener("click", () => {
+    localStorage.setItem("block", false);
+    info();
+})
+
+function info() {
+    if (localStorage.getItem("block") === "true") {
+        userInfo.textContent = "Blocked"
+    }
+    else userInfo.textContent = "Unblocked"
+}
+
+4. Blocking scroll until something happens:
+  
+
+5. Custom tooltip:

@@ -193,4 +193,4 @@ fetch("https://randomuser.me/api/")
         // console.log(gender, name.first, name.last, email);
         // console.log(data.results[0].dob.age);
          parent.textContent += "HEY";
-    })
+    }) 

@@ -54,8 +54,9 @@ Shift + Alt + A :- for commenting a code or text more than one line.
         for: for(START; END; CHANGE){
 
         }
-        forEach:
-    - Unimportant
+        forEach: array.forEach((var, index) => {
+        })
+    - Unimportant:
         do-while: do START;
                 while(END){
                     CHANGE
@@ -84,7 +85,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             // arrow function with one parameter
         }
         var abc = (a) => {
-            return "hello"; /aUIO
+            return "hello";
             // arrow function with implicit return
         }
 
@@ -195,10 +196,11 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             returnedFnc();
 
     Constructor Function: A function which uses 'this' OR without 'this'keyword and make new objects with the help of 'new' keyword then that function is called as Constructor function.
-        //function human(){
+        A constructor function always starts with function keyword and no other keyword. Function name should start with a Capital letter.
+        //function Human(){
 
         }
-        new human();
+        new Human();
     It returns a blank object.
 
 

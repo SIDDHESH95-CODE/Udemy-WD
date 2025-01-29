@@ -1,7 +1,7 @@
 let computer = { cpu: 12 }
 let lenovo = {
     desktop: "FullHD",
-    __proto__: computer
+    __proto__: "computer"
 }
 let hardware = {
     machine: computer
@@ -13,6 +13,6 @@ let hardware = {
 const object = {};
 object.property1 = 34;
 
-console.log(object.hasOwnProperty('property1'));
-console.log(object.hasOwnProperty('toString'));
-console.log(object.hasOwnProperty('hasOwnProperty'));
+// console.log(object.hasOwnProperty('property1'));
+// console.log(object.hasOwnProperty('toString'));
+// console.log(object.hasOwnProperty('hasOwnProperty'));

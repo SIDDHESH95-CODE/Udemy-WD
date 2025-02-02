@@ -1,15 +1,31 @@
-console.log("sample");
+// console.log("Hello World");
 
-function Human(name, age) {
-    this.name = name;
-    this.age = age;
+/* function add(a, b) {
+    console.log(a + b);
 }
 
-Human.prototype.greet = function() {
-    return `He's name is ${this.name} and he's age is ${this.age}!`
+add(233, 434);
+add(-2, 1); */
+
+
+/* const areaOfRectangle = function calculateArea(length, width) {
+    if (length <= 0 || width <= 0) {
+        throw new Error("Length/width should not be a negative value!");
+        
+    }
+    let area = length * width;
+    return `The area of a rectangle is ${area}.`
 }
 
-const person1 = new Human("Siddhesh", 29);
-// console.log(person1.greet);
+areaOfRectangle(23, 84);
+console.log(areaOfRectangle(23, -84)); */
 
-console.log(person1.greet()); 
+
+
+function number(num) {
+    if (num % 2 == 0) {
+        console.log("Even Number");
+    }else console.log("Odd Number");
+}
+
+number(0);

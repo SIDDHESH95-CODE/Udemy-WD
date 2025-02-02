@@ -21,6 +21,41 @@ function Chai(name){
 }
 
 let tea = new Chai("lemon");
-console.log(tea.drinking());
+// console.log(tea.drinking());
 
  
+/* function sumOfNumbers(arr) {
+    let sum = 0;
+    arr.forEach(item => {
+        sum += item;
+    })
+    console.log(sum);
+}
+
+sumOfNumbers([3,2,1]); */
+
+
+/* function findLargestNumber(arr){
+    return Math.min(...arr)
+}
+
+let lNum = findLargestNumber([1,5,3,9,2]);
+console.log(lNum); */
+
+
+/* function reverseString(str) {
+    let newStr = str.split("").reverse().join("");
+    console.log(newStr);
+}
+
+reverseString("hello"); */
+
+let vowels = ["a", "e", "i", "o", "u"];
+function countVowels(str) {
+    let newStr = str.split("");
+    if (newStr === vowels){
+        console.log("none");
+    }
+}
+
+countVowels("javascript")

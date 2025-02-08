@@ -408,6 +408,24 @@ const myCat = new Cat();
 myCat.speak();     // Output: The cat meows.
 
 
+Static in class:
+    In JavaScript, static is used in the context of classes, and it refers to methods or properties that belong to the class itself, rather than instances of the class. Static are cannot be called with the new instances rather they directly can be called with the parent class name.
+
+    // class Math{
+    static add(a, b){
+        return a + b;
+    }
+
+    static multiply(x){
+        return x * x;
+    }
+}
+
+let problem1 = new Math(2, 5);
+// console.log(problem1.add());  // Error- problem1.add is not a function.
+
+console.log(Math.add(2, 5));
+console.log(Math.multiply(2));
 
 
 # <-- Asynchronous JS -->

@@ -51,7 +51,7 @@ class BankAccount {
 Those hidden complex things and internal logic are hidden are called as abstraction. */ 
 
 // Abstract class (simulation)
-class Car {
+/* class Car {
     // This is the abstract method (to be implemented by concrete classes)
     start() {
       throw new Error('Method "start()" must be implemented.');
@@ -104,14 +104,14 @@ class Car {
   const myGasCar = new GasCar();
   myGasCar.start();           // Gas car started with a roar.
   myGasCar.accelerate();      // Gas car is accelerating with power.
-  myGasCar.stop();            // Gas car stopped.
+  myGasCar.stop();            // Gas car stopped. */
   
 
 
 // Polymorphism:
 
 
-class Bird {
+/* class Bird {
 
     constructor(name){
         this.name = name;
@@ -131,5 +131,23 @@ let bird = new Bird("sparrow");
 let penguin = new Penguin();
 
 console.log(bird.fly());
-console.log(penguin.fly());
+console.log(penguin.fly()); */
 
+
+// Static:
+
+class Math{
+    static add(a, b){
+        return a + b;
+    }
+
+    static multiply(x){
+        return x * x;
+    }
+}
+
+let problem1 = new Math(2, 5);
+console.log(problem1.add());
+
+// console.log(Math.add(2, 5));
+// console.log(Math.multiply(2));

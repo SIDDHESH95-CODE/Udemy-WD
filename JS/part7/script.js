@@ -2,9 +2,30 @@
 
 // console.log("Hey DOM");
 
-let btnPara = document.querySelector(".paraChange");
+
+// Example 1:
+
+/* let btnPara = document.querySelector(".paraChange");
 
 btnPara.addEventListener("click", function() {
     // console.log("Event Listener fired");
     document.querySelector(".firstPara").textContent = "The paragraph text has changed using JS."
+}) */
+
+
+// Example 2:
+
+/* let btn = document.querySelector(".btnChocolate");
+let targetUl = document.querySelector("ul");
+btn.addEventListener("click", function(){
+    targetUl.querySelectorAll("li")[0].style.backgroundColor = "yellow";
+    }) */
+   
+   
+// Example 2:
+let btn = document.querySelector(".btnCoffee");
+let targetUl = document.querySelector("ol");
+btn.addEventListener("click", function(){
+    targetUl.querySelectorAll("li")[0].textContent = "Americano";
 })
+

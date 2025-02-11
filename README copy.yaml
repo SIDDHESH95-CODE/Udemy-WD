@@ -188,12 +188,28 @@ Shift + Alt + A :- for commenting a code or text more than one line.
          
     bind: 
         same as 'call' but 'bind' returns a function after it called.
+        Example 1:
             // let obj = { name: "Javascript" };
             function abc() {
                 console.log(this);
             }
             let returnedFnc = abc.bind(obj);
             returnedFnc();
+        
+        Example 2:
+            let person = {
+                name: "Ritesh",
+                
+                greet() {
+                    console.log(`Hi ${this.name}, how are you?`);
+                }
+            }
+
+            person.greet();
+
+            const greetFnc = person.greet.bind({name: "John"});
+            greetFnc();
+
 
     Constructor Function: A function which uses 'this' OR without 'this'keyword and make new objects with the help of 'new' keyword then that function is called as Constructor function.
         A constructor function always starts with function keyword and no other keyword. Function name should start with a Capital letter.
@@ -205,7 +221,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
 
 
     Prototypal inheritance:
-        Parent function is basically means the schema you required to make an object.
+        Parent function means the schema you required to make an object.
         If you provide default value inside parent function then it will use more data, speed & storage every time you run the child function. So to overcome that you push that default value inside a prototype and then you can access that inside a child function anywhere & anytime.
         // function makeHuman(name, age){
             this.name = name;
@@ -527,7 +543,7 @@ console.log(Math.multiply(2));
     Async/await:
         If you wan to run async code before the synchronous code then thats when the async/await comes up.
         Always use async on the await's parent function.
-
+        Example 1:
         // async function Hello() {
             let a = await fetch("https://randomuser.me/api/")
             a = await a.json()
@@ -535,6 +551,30 @@ console.log(Math.multiply(2));
             }
 
             Hello();
+
+        Example 2:
+        function fetchData() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve({name: "John", url: "https://johndoe.com"})
+                }, 5000);
+            })
+        }
+
+        async function getData() {
+            try {   
+                console.log("Fetching user data...");
+                const data = await fetchData();
+                console.log("User data fetch successfully.");
+                console.log("Data:", data);
+            }
+            catch (error) {
+                console.error("Error fetching data.");
+            }
+        }
+
+        getData();
+
 
 
     Generators:

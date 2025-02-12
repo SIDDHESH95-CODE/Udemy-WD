@@ -20,34 +20,37 @@ async function getData() {
 
 getData(); */
 
+/* If you have more than one promise to executes then Promise.all() is the solution. */
 
 function userData() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve({name: "Paula", email: "paula@gmail.com"})
-        }, 4000);
-    })
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ name: "Paula", email: "paula@gmail.com" });
+    }, 4000);
+  });
 }
 
 function companyData() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve({name: "Accenture", url: "https://accenture.com"})
-        }, 5000);
-    })
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ name: "Accenture", url: "https://accenture.com" });
+    }, 5000);
+  });
 }
 
-
 async function fetchData() {
-    try {
-        console.log("Fetching data...");
-        const uData = await userData();
-        const cData = await companyData();
-        console.log("Data fetched successful.");
-        console.log("Data:", uData, cData);
-    } catch (error) {
-        console.error("Error fetching data.");
-    }
+  try {
+    console.log("Fetching data...");
+    // const uData = await userData();
+    // const cData = await companyData();
+
+    const [uData, cData] = await Promise.all([userData(), companyData()]);
+
+    console.log("Data fetched successful.");
+    console.log("Data:", [uData, cData]);
+  } catch (error) {
+    console.error("Error fetching data.");
+  }
 }
 
 fetchData();

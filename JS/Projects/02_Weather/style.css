@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container {
+    padding: 50px;
+    background-color: grey;
+    width: 400px;
+    border-radius: 20px;
+}
+
+.hidden {
+    display: none;
+}

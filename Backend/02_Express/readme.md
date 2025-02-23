@@ -17,3 +17,19 @@ app.use:
     // app.use((req, res, next) => {
             next()
         })
+
+
+req.params.username:
+    To access the value from the route url.
+    // app.get("/profile/:username", (req, res) => {
+        res.send(`Hello from ${req.params.username}`)
+        })
+
+
+Setting up EJS:
+    1. ejs install: npm i ejs
+    2. configure ejs: app.set("view engine", "ejs");
+    3. make "views" folder
+    4. make .ejs files inside "views" folder
+    5. in place of res.send() use res.render()
+    6. inside res.render() you have to declare filename from the views folder but only write the file name without the extension. Skip .ejs extension keyword.

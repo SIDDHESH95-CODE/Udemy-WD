@@ -30,4 +30,17 @@ Static files setup:
             .js files
 
     app.use(express.static("./public"));
-    link the files to be used inside index.js file by providing their respective path but not to use /public as it will be by default added. 
+    link the files to be used inside index.js file by providing their respective path but not to use /public as it will be by default added.
+
+
+Express Generator setup:
+    1. open cmd and come to the last folder
+    2. install express generator globally once per machine
+        npm i express-generator -g
+    3. select a specific folder directly write below line to create express app
+        express "app-name" --view=ejs
+    4. then follow these steps: 
+            select the app folder which created - cd/app-name
+            install node - npm i
+            open with vs code - code .
+    

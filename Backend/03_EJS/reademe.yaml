@@ -44,3 +44,13 @@ Express Generator setup:
             install node - npm i
             open with vs code - code .
     
+
+Code Side:
+    - DB setup
+    - Model
+    - Schema
+
+DB(mongoDB) Side:
+    - DB formation
+    - Collection
+    - Documents

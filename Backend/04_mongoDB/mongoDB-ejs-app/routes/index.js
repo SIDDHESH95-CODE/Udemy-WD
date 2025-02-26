@@ -4,6 +4,7 @@ var userModel = require('./users');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  req.session.ban = true;
   res.render('index', { title: 'MongoDB' });
 });
 
@@ -43,6 +44,23 @@ router.get("/finduser", async (req, res) => {
 router.get("/delete", async (req, res) => {
   let deletedUser = await userModel.findOneAndDelete({username: "john"});
   res.send(deletedUser);
+})
+
+// create session memory on the server:
+/* req.session.ban = true;  // create on the "/" page. */
+
+router.get("/checkban", (req, res) => {
+  // console.log(req.session);
+  if (req.session.ban) res.send("You are banned")
+    else res.send("You are not banned")
+})
+
+// delete created session memory from the server:
+router.get("/removeban", (req, res) =>{
+  req.session.destroy(function(err) {
+    if (err) throw err;
+    res.send("ban removed")
+  })
 })
 
 module.exports = router;

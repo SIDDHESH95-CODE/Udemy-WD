@@ -30,4 +30,18 @@ Client:
 Server:
     Session:
         store data as a session on the server
-        not that risky because data stored on the server
+        not that risky because data stored on the server24
+    installation & setup:
+        npm i express-session
+        In the main app.js file:
+            app.use(session({
+                resave: false,  // if changes not done then it will resave
+                saveUninitialized: false,   // uninitialized value will not save
+                secret: "anythingButString" // secret key to identify
+            }));
+        session memory creation:
+            req.session.anySessionMemoryName = anySessionMemoryValue;
+        read session memory:
+            req..session.sessionMemoryName;
+        session memory deletion:
+            req.session.destroy()

@@ -1,20 +1,33 @@
 Steps:
-    - create app with ejs:
+    1. create app with ejs:
         express "app-name"
-    - download & install mongoDB: 
+    2. download & install mongoDB: 
         MongoDB Atlas
-    - install mongoose:
+    3. install mongoose:
         npm i mongoose
-    - require mongoose and connection setup:
+    4. require mongoose and connection setup:
         const mongoose = require('mongoose');
         mongoose.connect("mongodb://127.0.0.1:27017/dbname");
-    - make schema:
+    5. make schema:
         mongoose.Schema({
             username: String,
             email: String,
             age: Number
         })
-    - create model from mongoose and export:
+    6. create model from mongoose and export:
         module.exports = mongoose.model("modelName", schemaName);
 
-    
+Note: In DB language,
+        One user data is called as document.
+        All document makes a collection.
+        And all collection are saved in a database.
+
+Client:
+    Cookie: 
+        store data as a cookie in your local machine
+        a bit risky because data can be manipulate
+
+Server:
+    Session:
+        store data as a session on the server
+        not that risky because data stored on the server

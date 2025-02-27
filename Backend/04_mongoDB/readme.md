@@ -24,16 +24,29 @@ Note: In DB language,
 
 Client:
     Cookie: 
-        store data as a cookie in your local machine
+        store data as a cookie in your browser
         a bit risky because data can be manipulate
+    installation & setup:
+        npm i cookie-parser
+        In the main app.js file:
+            const cookieParser = require('cookie-parser');
+            app.use(cookieParser());
+        Cookie memory creation:
+            res.cookie("name", value);
+        Reading cookie:
+            req.cookies.name
+        Deleting cookie:
+            res.clearCookie("name");
+
 
 Server:
     Session:
-        store data as a session on the server
+        store data as a session on the server 
         not that risky because data stored on the server24
     installation & setup:
         npm i express-session
         In the main app.js file:
+            const session = require('express-session');
             app.use(session({
                 resave: false,  // if changes not done then it will resave
                 saveUninitialized: false,   // uninitialized value will not save

@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('connectflashmessage:server');
+var debug = require('debug')('flashmessageapp:server');
 var http = require('http');
 
 /**

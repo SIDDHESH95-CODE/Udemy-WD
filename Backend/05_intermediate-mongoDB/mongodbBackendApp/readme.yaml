@@ -45,7 +45,39 @@ Steps:
 
 Questions:
     1. How can I perform a case-insensitive search in mongoose?
-    2. How do I find documents where an array field contains all of a set of    its values?
+        //  let regexValue = new RegExp("^sidd$", "i");
+
+    2. How do I find documents where an array field contains all of a set of its values?
+        //  let user = userModel.find( {category: {$all: {categoryValue} } } );
+
     3. How can I search for a document for a specific date range in mongoose?
+        // $gte = greater than equal, $lte = less than equal, $gt = greater than, $lt = less than
+            let startDate = new Date("2025-02-28"); 
+            let endDate = new Date("2025-03-01"); 
+            const dataByDate = await userModel.find({dateCreated: {$gte: startDate, $lte: endDate}});
+
     4. How can I filter documents based on existence of a field in mongoose?
+        // $exists = shows the particular field is exists in the db or not.
+            let categoryAvailable = await userModel.find({ email: { $exists: true } });
+
     5. How can I filter documents based on a specific field's length in mongoose?
+        //  query predicate:
+                An expression that returns a boolean indicating whether a document matches the specified query.
+                For example, { name: { $eq: "Alice" } }, which returns documents that have a field "name" whose value is the string "Alice".
+            $expr = Allows the use of 'expressions' within a 'query predicate'.
+            $and = performs a logical AND operation on an array of one or more expressions (<expression1>, <expression2>, and so on) and selects the documents that satisfy all the expressions.
+            $strLenCP = Returns the number of UTF-8 code points in the specified string.
+
+            eg. router.get("/searchbylen", async (req, res) => {
+                let userByLen = await userModel.find({
+                    $expr: {
+                    $and: [
+                        { $gte: [{ $strLenCP: "$email" }, 0] },
+                        { $lte: [{ $strLenCP: "$email" }, 15] }
+                        ]
+                    }
+                    })
+                res.send(userByLen);
+                })
+
+                // It will return those data from the db which has the email string length between 0 - 15.

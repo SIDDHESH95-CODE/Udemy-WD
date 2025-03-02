@@ -4,7 +4,7 @@ Setting up EJS:
 
 1. install ejs: npm i ejs
 2. configure ejs in your index.js file: app.set("view engine", "ejs");
-3. make a folder named by "views" and create your routing files inside the folder but with the .ejs extension only: v iews/index.ejs
+3. make a folder named by "views" and create your routing files inside the folder but with the .ejs extension only: views/index.ejs
 4. create a route inside index.js file and while sending a response use render function: res.render();
 5. inside res.render() mentioned your file name from views folder but without the extension as by default "views" folder contains only .ejs file: res.render("index") 
 6. to get the value dynamically and display in your frontend then use <%=variable name%>

@@ -1,20 +1,20 @@
-##In todays world, web dev/software dev is all about
+## In todays world, web dev/software dev is all about
 - 20% actual coding
 - 30% fixing bugs
 - 50% management meetings, problem solving & gathering best solutions
 
 
-ARIA
+ARIA:
 Accessible Rich Internet Applications (ARIA) is a set of roles and attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 
 
-CSS:
+# CSS:
 There are 3 types of methods for writing CSS:
 1. Inline style
 2. Style tag
 3. External .css file
 
-Tailwind CSS:
+# Tailwind CSS:
 - In responsiveness of the webpage, the breakpoints that are provided by the Tailwind are mobile first only.
 That means imagine that you are building a website for mobile and breakpoints used are for sm screen first then md screen and then lg screens.
 - sm: whatever styles you have provided in sm are going to apply to the above sm screens.
@@ -22,7 +22,7 @@ That means imagine that you are building a website for mobile and breakpoints us
 - lg: whatever styles you have provided in lg are going to apply to the above lg screens.
 
 
-JS:
+# JS:
 JavaScript is an Prototype based language and not the object-oriented programming language.
 
 Shift + Alt + A :- for commenting a code or text more than one line.

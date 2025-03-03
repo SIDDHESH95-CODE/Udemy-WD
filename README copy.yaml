@@ -649,5 +649,3 @@ console.log(Math.multiply(2));
                 console.log(details.clientX);
                 console.log(details.clientX, details.clientY);
 
-
-     

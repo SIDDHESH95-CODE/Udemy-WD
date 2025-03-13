@@ -257,10 +257,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
     Event Bubbling is a way in which an event is propagated from a deeply nested element up to the top-level document object.
 
     
-
     Event Delegation:
-
-
 
     Higher-order-function (hof):
     try & catch:
@@ -270,8 +267,47 @@ Shift + Alt + A :- for commenting a code or text more than one line.
 Set(): It is a method in JS to remove duplicate values from an array/nested array and returns into a new one without duplication.
 
 map():
+    The map() method creates a new array by applying a given function to each element in the original array. 
+    It does not modify the original array.
+    Syntax: 
+        let newArray = array.map(callback(currentValue, index, array));
+            It takes a callback function inside with the three parameters where index and array are optional.
+    eg. let arr = [1, 2, 3, 4, 5];
+        let newArr = arr.map((elem) => elem + 1);
+        console.log(newArr);    // [2, 3, 4, 5, 6]
+
 filter():
+    The filter() method creates a new array with all elements that pass the condition specified in the given function. It is used to filter out elements that do not meet the condition.
+    Syntax: 
+        let newArray = array.filter(callback(currentValue, index, array));
+    eg. let arr = [1, 2, 3, 4, 5];
+        let newArr = arr.filter((elem) => elem > 3);
+        console.log(newArr);    // [1, 2]
+
 reduce():
+    The reduce() method reduces an array to a single value by applying a function (called a reducer function) that takes an accumulator and the current element.
+    Syntax:
+        let result = array.reduce(callback(accumulator, currentValue, index, array), initialValue);
+
+    Parameters:
+        callback (Required):
+            A function that is applied to each element of the array.
+        accumulator: 
+            The accumulated value that gets updated after each iteration. This is where the result is built up.
+        currentValue: 
+            The current element being processed in the array.
+        index (Optional): 
+            The index of the current element.
+        array (Optional):
+            The array on which reduce() was called.
+        initialValue (Optional):
+            The initial value to start the accumulator with. If not provided, the first element of the array is used.
+        Returns:
+            A single value (such as a sum, product, or transformed result) after applying the reducer function to all elements.
+    eg. 
+        const numbers = [1, 2, 3, 4];
+        const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        console.log(sum);   // 10
 
 this:   a value that can be change at any point of time.
     -global: window

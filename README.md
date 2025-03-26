@@ -685,3 +685,8 @@ console.log(Math.multiply(2));
                 console.log(details.clientX);
                 console.log(details.clientX, details.clientY);
 
+
+React JS:
+    - create-react-app is outdated now and no longer in use instead of creating a react app with 'npm create vite@latest'
+
+    

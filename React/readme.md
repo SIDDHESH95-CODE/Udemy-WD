@@ -1,5 +1,9 @@
 # Welcome to ReactJS
 
+- ReactJS is a JS library and not a framework.
+- NextJS is a framework.
+- ReactJS is used to make single-page application.
+
 - To create basic react app: (outdated and no longer in use)
     npx create-react-app app-name
     npm run start
@@ -8,6 +12,8 @@
     npm create vite@latest app name
     npm i
     npm run dev
+    
+- The component file function name should always starts with Capital Letter otherwise react consider it as a html tag and throws an error.
 
 ## React Hooks:
     1) useState:
@@ -29,4 +35,40 @@
         2. Dependency Array(optional): It is an optional array of dependencies that controls when the effect runs. If you pass an empty array([]), then useEffect will run only once.
 
     3) useRef:
+
+
+
+Interview Questions:
+1. Difference between library and a framework?
+    Library: 
+        You call the code. 
+        You’re in control. You decide when and how to use the code in the library.
+    Framework: 
+        The code calls you.
+        It’s in control of the flow. You just plug your code into it.
+
+2. Difference between dependencies and devDependencies?
+    dependencies:
+        dependencies are those libraries on which you project is running/working on.
+    devDependencies:
+        These are development dependencies on which your development is happening.
+- Node modules folder in your project entirely dependent on dependencies and devDependencies.
+
+3. Difference between default export, named export and function export?
+    - [Default Export]: 
+        You can only have one default export per file.
+        Export:
+            export default function add(a, b) {
+                return a + b;
+            }
+        Import:
+            import add from './filename.js';
+    - [Named Export]:
+        You can have multiple named exports from a file.
+            Export:
+                export const add = (a, b) => a + b;
+                export const subtract = (a, b) => a - b;
+            Import:
+                import { add, subtract } from './filename.js';
+
         

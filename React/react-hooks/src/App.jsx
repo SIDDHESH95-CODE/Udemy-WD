@@ -1,14 +1,13 @@
-import { useState } from 'react'
 import './App.css'
-import UseState from './components/UseState/UseState'
-import UseEffect from './components/UseEffect/UseEffect'
+import { Effect } from './components/use-effect'
+import { State } from './components/use-state'
 
 function App() {
 
   return (
     <>
-      {/* <UseState /> */}
-      <UseEffect />
+      {/* <State /> */}
+      <Effect />
     </>
   )
 }

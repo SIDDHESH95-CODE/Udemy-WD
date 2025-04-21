@@ -55,7 +55,7 @@ Interview Questions:
 - Node modules folder in your project entirely dependent on dependencies and devDependencies.
 
 3. Difference between default export, named export and function export?
-    - [Default Export]: 
+    - <ins>Default Export</ins>: 
         You can only have one default export per file.
         Export:
             export default function add(a, b) {

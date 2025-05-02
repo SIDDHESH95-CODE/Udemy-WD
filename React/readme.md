@@ -15,6 +15,17 @@
     
 - The component file function name should always starts with Capital Letter otherwise react consider it as a html tag and throws an error.
 
+- In react, to check the react version you are using for your project go to "package.json" file. React version will show in 3 numbers with 2 decimals.
+Eg. "react": "^19.0.0"
+    1st number is known for React Major update version,
+    2nd number is known as Miner update version,
+    3rd number is the bug fixes version
+To update to the react latest version use below cammand:
+    npm i react@rc react-dom@rc
+
+    Controlled Components:
+        These are only those components in which form is available with the input fields.
+
 ## React Hooks:
     1) useState:
         It helps to make the changes in your DOM when the click event is happen on the button on any other.
@@ -63,12 +74,16 @@ Interview Questions:
             }
         Import:
             import add from './filename.js';
-    - [Named Export]:
+    - <ins>Named Export</ins>:
         You can have multiple named exports from a file.
             Export:
                 export const add = (a, b) => a + b;
                 export const subtract = (a, b) => a - b;
             Import:
                 import { add, subtract } from './filename.js';
-
-        
+    - <ins>Function as Default Export<ins>:
+        This isn’t a separate category — it just means you’re exporting a function, either as a default or named export.
+            Export:
+                export default function greet() {
+                    console.log("Hello");
+                }

@@ -1,73 +1,78 @@
 ## In todays world, web dev/software dev is all about
+
 - 20% actual coding
 - 30% fixing bugs
 - 50% management meetings, problem solving & gathering best solutions
 
-
 ARIA:
 Accessible Rich Internet Applications (ARIA) is a set of roles and attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 
-
 # CSS:
+
 There are 3 types of methods for writing CSS:
+
 1. Inline style
 2. Style tag
 3. External .css file
 
 # Tailwind CSS:
+
 - In responsiveness of the webpage, the breakpoints that are provided by the Tailwind are mobile first only.
-That means imagine that you are building a website for mobile and breakpoints used are for sm screen first then md screen and then lg screens.
+  That means imagine that you are building a website for mobile and breakpoints used are for sm screen first then md screen and then lg screens.
 - sm: whatever styles you have provided in sm are going to apply to the above sm screens.
 - md: whatever styles you have provided in md are going to apply to the above md screens.
 - lg: whatever styles you have provided in lg are going to apply to the above lg screens.
 
-
 # JS:
+
 JavaScript is an Prototype based language and not the object-oriented programming language.
 
 Shift + Alt + A :- for commenting a code or text more than one line.
 
 <!-- Basics -->
+
 - Inbuilt features:
-    console.log(), console.alert(), console.warn(), prompt(), alert(), etc..
+  console.log(), console.alert(), console.warn(), prompt(), alert(), etc..
 - Variable constants:
-    var, let, const
-    let: block scope, re-assignable
-    const: block scope, un-assignable
-    Hoisting: var is hoisted to the top of the function, let and const are hoisted to the top of the block.
-    The values of the variables and constants are stored in heap memory by the browser so they can be used at anywhere.
+  var, let, const
+  let: block scope, re-assignable
+  const: block scope, un-assignable
+  Hoisting: var is hoisted to the top of the function, let and const are hoisted to the top of the block.
+  The values of the variables and constants are stored in heap memory by the browser so they can be used at anywhere.
 - Compilers and interpreters:
-    Interpreters run the code faster than the compiler but executes the code slower than the compiler.
+  Interpreters run the code faster than the compiler but executes the code slower than the compiler.
 - Window:
-    Window objects are not part of the JS engine like console.log(), prompt(), alert(), they are not part of the JS instead they are the part of the browser.
+  Window objects are not part of the JS engine like console.log(), prompt(), alert(), they are not part of the JS instead they are the part of the browser.
 - Types:
-    - Primitive:
-        String, boolean, number, float, null, undefined, symbol
-    - Non-primitive/Reference:
-        array, objects, functions
+  - Primitive:
+    String, boolean, number, float, null, undefined, symbol
+  - Non-primitive/Reference:
+    array, objects, functions
 - Conditionals:
-    if, if else
-    falsy values: null, undefined, "", '', NaN, 0, document.all(), false
-    truthy values: Other than falsy values all values are considered truthy.
+  if, if else
+  falsy values: null, undefined, "", '', NaN, 0, document.all(), false
+  truthy values: Other than falsy values all values are considered truthy.
 - Loops: Repeat
-    - Important:
-        for: for(START; END; CHANGE){
 
-        }
-        forEach: array.forEach((var, index) => {
-        })
-    - Unimportant:
-        do-while: do START;
-                while(END){
-                    CHANGE
-                }
-        while: while(end){
-                CHANGE
-            }
-        do-while, forof, forin
+  - Important:
+    for: for(START; END; CHANGE){
 
+    }
+    forEach: array.forEach((var, index) => {
+    })
+
+  - Unimportant:
+    do-while: do START;
+    while(END){
+    CHANGE
+    }
+    while: while(end){
+    CHANGE
+    }
+    do-while, forof, forin
 
 <!-- Intermediate -->
+
     Functions:
         function abc(){
             // function statement
@@ -115,6 +120,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
         Asynchronous code runs after all the Synchronous code executed.
 
 # <!-- Advance -->
+
     this:
         this has a different value in different conditions as follows;
         -global: window
@@ -168,7 +174,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
                 console.log(this);
             })
 
-    call: 
+    call:
         By default the value of 'this' inside a function is 'window', you can change the value of 'this' using function 'call'. Just declare a name inside the 'call' function.
             // let obj = { name: "Tony" };
             function abc(){
@@ -176,7 +182,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             }
             abc.call(obj);  OR abc.call(12);
 
-    apply: 
+    apply:
         same as 'call' but it takes an array as a arguments while declaring the parameters for the function.
             // let obj = { name: "Kat" };
             function abc(a, b) {
@@ -184,9 +190,9 @@ Shift + Alt + A :- for commenting a code or text more than one line.
 
             }
             abc.apply(obj, [2, 4])
-         
-         
-    bind: 
+
+
+    bind:
         same as 'call' but 'bind' returns a function after it called.
         Example 1:
             // let obj = { name: "Javascript" };
@@ -195,11 +201,11 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             }
             let returnedFnc = abc.bind(obj);
             returnedFnc();
-        
+
         Example 2:
             let person = {
                 name: "Ritesh",
-                
+
                 greet() {
                     console.log(`Hi ${this.name}, how are you?`);
                 }
@@ -227,7 +233,7 @@ Shift + Alt + A :- for commenting a code or text more than one line.
             this.name = name;
             this.age = age;
             }
-               
+
             makeHuman.prototype.printMyName = function(){
                 console.log(this.name);
             }
@@ -256,47 +262,45 @@ Shift + Alt + A :- for commenting a code or text more than one line.
     Event Bubbling:
     Event Bubbling is a way in which an event is propagated from a deeply nested element up to the top-level document object.
 
-    
+
     Event Delegation:
 
     Higher-order-function (hof):
     try & catch:
 
-
-
 Set(): It is a method in JS to remove duplicate values from an array/nested array and returns into a new one without duplication.
 
 map():
-    The map() method creates a new array by applying a given function to each element in the original array. 
-    It does not modify the original array.
-    Syntax: 
-        let newArray = array.map(callback(currentValue, index, array));
-            It takes a callback function inside with the three parameters where index and array are optional.
-    eg. let arr = [1, 2, 3, 4, 5];
-        let newArr = arr.map((elem) => elem + 1);
-        console.log(newArr);    // [2, 3, 4, 5, 6]
+The map() method creates a new array by applying a given function to each element in the original array.
+It does not modify the original array.
+Syntax:
+let newArray = array.map(callback(currentValue, index, array));
+It takes a callback function inside with the three parameters where index and array are optional.
+eg. let arr = [1, 2, 3, 4, 5];
+let newArr = arr.map((elem) => elem + 1);
+console.log(newArr); // [2, 3, 4, 5, 6]
 
 filter():
-    The filter() method creates a new array with all elements that pass the condition specified in the given function. It is used to filter out elements that do not meet the condition.
-    Syntax: 
-        let newArray = array.filter(callback(currentValue, index, array));
-    eg. let arr = [1, 2, 3, 4, 5];
-        let newArr = arr.filter((elem) => elem > 3);
-        console.log(newArr);    // [1, 2]
+The filter() method creates a new array with all elements that pass the condition specified in the given function. It is used to filter out elements that do not meet the condition.
+Syntax:
+let newArray = array.filter(callback(currentValue, index, array));
+eg. let arr = [1, 2, 3, 4, 5];
+let newArr = arr.filter((elem) => elem > 3);
+console.log(newArr); // [1, 2]
 
 reduce():
-    The reduce() method reduces an array to a single value by applying a function (called a reducer function) that takes an accumulator and the current element.
-    Syntax:
-        let result = array.reduce(callback(accumulator, currentValue, index, array), initialValue);
+The reduce() method reduces an array to a single value by applying a function (called a reducer function) that takes an accumulator and the current element.
+Syntax:
+let result = array.reduce(callback(accumulator, currentValue, index, array), initialValue);
 
     Parameters:
         callback (Required):
             A function that is applied to each element of the array.
-        accumulator: 
+        accumulator:
             The accumulated value that gets updated after each iteration. This is where the result is built up.
-        currentValue: 
+        currentValue:
             The current element being processed in the array.
-        index (Optional): 
+        index (Optional):
             The index of the current element.
         array (Optional):
             The array on which reduce() was called.
@@ -304,165 +308,167 @@ reduce():
             The initial value to start the accumulator with. If not provided, the first element of the array is used.
         Returns:
             A single value (such as a sum, product, or transformed result) after applying the reducer function to all elements.
-    eg. 
+    eg.
         const numbers = [1, 2, 3, 4];
         const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
         console.log(sum);   // 10
 
-this:   a value that can be change at any point of time.
-    -global: window
-    -function: window
-    -method: object
-    -fnc inside method(es5): window
-    -fnc inside method(es6): object
-    -constructor fnc: new blank object
-    -event listener fnc: that element
+this: a value that can be change at any point of time.
+-global: window
+-function: window
+-method: object
+-fnc inside method(es5): window
+-fnc inside method(es6): object
+-constructor fnc: new blank object
+-event listener fnc: that element
 Directly declared 'this' inside a function, represents to a window object.
 
-Prototype: (__proto__)
-    Prototypes in JS are works as a default version of an object. You can declare or use these __proto__ object values in any other objects.
+Prototype: (**proto**)
+Prototypes in JS are works as a default version of an object. You can declare or use these **proto** object values in any other objects.
 
-
-/* Encapsulation: encapsulation is the concept of restricting access to some of an object's components and only exposing the necessary methods to interact with those components.
+/\* Encapsulation: encapsulation is the concept of restricting access to some of an object's components and only exposing the necessary methods to interact with those components.
 In simple words - Encapsulation means a declaring private variables inside a class so that creating a new instance, anyone cannot access those variables directly but if you have declared those variables inside the same objects and inside the same method then by using that method you can access those private variables.
-- Method in JS is nothing but a function declared inside an class. */
+
+- Method in JS is nothing but a function declared inside an class. \*/
 - the '#' syntax which enforces true privacy.
-    // class BankAccount {
-        #balance = 0;
+  // class BankAccount {
+  #balance = 0;
 
-    constructor(initialAmount) {
-        if (initialAmount > 0) {
-            this.#balance = initialAmount;
-        }
-    }
+      constructor(initialAmount) {
+          if (initialAmount > 0) {
+              this.#balance = initialAmount;
+          }
+      }
 
-    deposit(amount){
-        if (amount > 0) {
-            this.#balance += amount;
-            console.log(`${amount} has been credited to your account.`);
-        } else console.error("Amount should be greater than 0.");
-    }
+      deposit(amount){
+          if (amount > 0) {
+              this.#balance += amount;
+              console.log(`${amount} has been credited to your account.`);
+          } else console.error("Amount should be greater than 0.");
+      }
 
-    withdraw(amount){
-        if (amount > 0 && this.#balance >= amount) {
-            this.#balance -= amount;
-            console.log(`${amount} has been debited from your account.`);
-        } else console.error("You have insufficient balance.");
-    }
+      withdraw(amount){
+          if (amount > 0 && this.#balance >= amount) {
+              this.#balance -= amount;
+              console.log(`${amount} has been debited from your account.`);
+          } else console.error("You have insufficient balance.");
+      }
 
-    greet(name){
-        this.name = name;
-        return `${this.name}, welcome to your new account.`
-    }
+      greet(name){
+          this.name = name;
+          return `${this.name}, welcome to your new account.`
+      }
 
-    getBalance(){
-        return `Your account balance is $${this.#balance}.`
-    }
-}
+      getBalance(){
+          return `Your account balance is $${this.#balance}.`
+      }
+
+  }
 
 let aman = new BankAccount();
 console.log(aman.greet("Aman"));
 console.log(aman.getBalance());
 aman.deposit(5000);
 
+/\* Abstraction:
 
-/* Abstraction: 
 - When a person gets inside a car, he starts the car, accelerate the car and stops the car. Those are the major things are done but the person does not know after he starts the car, what actually happen like how the engine works once ignition is happened. How the breaks are works when he hit the breaks. Those are all the complex logic behind how a car works is abstracted away.
-Those hidden complex things and internal logic are hidden are called as abstraction. */ 
+  Those hidden complex things and internal logic are hidden are called as abstraction. \*/
 
 // Abstract class (simulation)
 class Car {
-    // This is the abstract method (to be implemented by concrete classes)
-    start() {
-      throw new Error('Method "start()" must be implemented.');
-    }
-  
+// This is the abstract method (to be implemented by concrete classes)
+start() {
+throw new Error('Method "start()" must be implemented.');
+}
+
     accelerate() {
       throw new Error('Method "accelerate()" must be implemented.');
     }
-  
+
     stop() {
       throw new Error('Method "stop()" must be implemented.');
     }
-  }
-  
-  // Concrete class that implements the abstract methods
-  class ElectricCar extends Car {
-    start() {
-      console.log('Electric car started silently.');
-    }
-  
+
+}
+
+// Concrete class that implements the abstract methods
+class ElectricCar extends Car {
+start() {
+console.log('Electric car started silently.');
+}
+
     accelerate() {
       console.log('Electric car is accelerating smoothly.');
     }
-  
+
     stop() {
       console.log('Electric car stopped.');
     }
-  }
-  
-  class GasCar extends Car {
-    start() {
-      console.log('Gas car started with a roar.');
-    }
-  
+
+}
+
+class GasCar extends Car {
+start() {
+console.log('Gas car started with a roar.');
+}
+
     accelerate() {
       console.log('Gas car is accelerating with power.');
     }
-  
+
     stop() {
       console.log('Gas car stopped.');
     }
-  }
-  
-  // Usage
-  const myElectricCar = new ElectricCar();
-  myElectricCar.start();      // Electric car started silently.
-  myElectricCar.accelerate(); // Electric car is accelerating smoothly.
-  myElectricCar.stop();       // Electric car stopped.
-  
-  const myGasCar = new GasCar();
-  myGasCar.start();           // Gas car started with a roar.
-  myGasCar.accelerate();      // Gas car is accelerating with power.
-  myGasCar.stop();            // Gas car stopped.
 
+}
+
+// Usage
+const myElectricCar = new ElectricCar();
+myElectricCar.start(); // Electric car started silently.
+myElectricCar.accelerate(); // Electric car is accelerating smoothly.
+myElectricCar.stop(); // Electric car stopped.
+
+const myGasCar = new GasCar();
+myGasCar.start(); // Gas car started with a roar.
+myGasCar.accelerate(); // Gas car is accelerating with power.
+myGasCar.stop(); // Gas car stopped.
 
 Polymorphism in JS:
-    Basically uses 'extends' keyword. Poly means Many & Morphism means Structure.
+Basically uses 'extends' keyword. Poly means Many & Morphism means Structure.
 
 // Parent class (or base class)
 class Animal {
-  speak() {
-    console.log("The animal makes a sound.");
-  }
+speak() {
+console.log("The animal makes a sound.");
+}
 }
 
 // Child class (or derived class)
 class Dog extends Animal {
-  speak() {
-    console.log("The dog barks.");
-  }
+speak() {
+console.log("The dog barks.");
+}
 }
 
 class Cat extends Animal {
-  speak() {
-    console.log("The cat meows.");
-  }
+speak() {
+console.log("The cat meows.");
+}
 }
 
 // Usage
 const myAnimal = new Animal();
-myAnimal.speak();  // Output: The animal makes a sound.
+myAnimal.speak(); // Output: The animal makes a sound.
 
 const myDog = new Dog();
-myDog.speak();     // Output: The dog barks.
+myDog.speak(); // Output: The dog barks.
 
 const myCat = new Cat();
-myCat.speak();     // Output: The cat meows.
-
+myCat.speak(); // Output: The cat meows.
 
 Static in class:
-    In JavaScript, static is used in the context of classes, and it refers to methods or properties that belong to the class itself, rather than instances of the class. Static are cannot be called with the new instances rather they directly can be called with the parent class name.
+In JavaScript, static is used in the context of classes, and it refers to methods or properties that belong to the class itself, rather than instances of the class. Static are cannot be called with the new instances rather they directly can be called with the parent class name.
 
     // class Math{
     static add(a, b){
@@ -472,19 +478,20 @@ Static in class:
     static multiply(x){
         return x * x;
     }
+
 }
 
 let problem1 = new Math(2, 5);
-// console.log(problem1.add());  // Error- problem1.add is not a function.
+// console.log(problem1.add()); // Error- problem1.add is not a function.
 
 console.log(Math.add(2, 5));
 console.log(Math.multiply(2));
 
-
 # <-- Asynchronous JS -->
-    setTimeout: 
+
+    setTimeout:
         setTimeout is function which takes 2 values,
-        1st is the function that will be called and 
+        1st is the function that will be called and
         2nd is the time in milliseconds after which the function will be called.
             // setTimeout(() => {
                 console.log("Hello!");
@@ -493,13 +500,13 @@ console.log(Math.multiply(2));
     setInterval:
         setInterval is same as setTimeout but setTimeout functions runs only  once after the timer expires but setInterval functions runs in the interval of the timer expires.
             // let interval = setInterval(() => {
-                console.log("Hello!"); 
+                console.log("Hello!");
                }, 2000);
 
         You can stop the setInterval function with the help of clearInterval() fnc.
             // clearInterval(interval);
 
-    
+
     Event Loop:
         Event loop is nothing but an event who checks if the main stack is empty or not. Once all the main stack code runs then all the side stack code will be executed.
 
@@ -523,7 +530,7 @@ console.log(Math.multiply(2));
                 .then((results) => console.log(results))
 
 
-    Promises: 
+    Promises:
         Promises are nothing but a asynchronous function which states only 2 things. Promise will either resolve() or reject() so according to that you have to run your code.
             Example 1:
             let userGender =  new Promise((resolve, reject) => {
@@ -550,20 +557,20 @@ console.log(Math.multiply(2));
                     if (success) {
                         resolve("Data fetched successfully.")
                     } else reject ("Error fetching data..")
-                    }, 3000);  
+                    }, 3000);
                 })
             }
 
         fetchData()
             .then((response) => console.log(response))
             .catch((error) => console.log(error))
- 
-        
+
+
 
     Callback function in an async code:
         callback function is a function which you can declare it inside a async which will run after the asynchronous code execution is done.
 
-        callback fnc takes 2 values i.e. 1st is var or URL and 2nd es5/es6 fnc  
+        callback fnc takes 2 values i.e. 1st is var or URL and 2nd es5/es6 fnc
         which usually named by "callback" OR "cb".
             // function data(url, callback) {
                 fetch(url)
@@ -574,7 +581,7 @@ console.log(Math.multiply(2));
             data("https://randomuser.me/api/", function (response) {
                 console.log(response.results[0].email)
             });
-    
+
 
     Async/await:
         If you wan to run async code before the synchronous code then thats when the async/await comes up.
@@ -598,7 +605,7 @@ console.log(Math.multiply(2));
         }
 
         async function getData() {
-            try {   
+            try {
                 console.log("Fetching user data...");
                 const data = await fetchData();
                 console.log("User data fetch successfully.");
@@ -685,8 +692,4 @@ console.log(Math.multiply(2));
                 console.log(details.clientX);
                 console.log(details.clientX, details.clientY);
 
-
-React JS:
-    - create-react-app is outdated now and no longer in use instead of creating a react app with 'npm create vite@latest'
-
-    
+React JS: - create-react-app is outdated now and no longer in use instead of creating a react app with 'npm create vite@latest'

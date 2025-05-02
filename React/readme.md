@@ -81,7 +81,7 @@ Interview Questions:
      export const subtract = (a, b) => a - b;
      Import:
      import { add, subtract } from './filename.js';
-   - <ins>Function as Default Export<ins>:
+   - <ins>Function as Default Export</ins>:
      This isn’t a separate category — it just means you’re exporting a function, either as a default or named export.
      Export:
      export default function greet() {

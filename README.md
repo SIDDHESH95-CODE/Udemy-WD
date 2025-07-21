@@ -1609,4 +1609,145 @@ Example:
     { id: 1, name: "Sam", location: "New York"}]
 
     console.table(obj);
-    
+
+
+REGEX in js:
+    A regular expression (regex) is a pattern used to match character combinations in strings — for validation, search, replace, etc.
+    You can define a regex in 2 ways:
+syn 1:
+    const regex = /abc/;
+syn 2:
+    const regex = new RegExp("abc");
+Method-	                    What It Does-
+.test(str)	                Returns true if regex matches the string
+.exec(str)	                Returns match details (or null)
+str.match(regex)	        Returns match(es) from the string
+str.replace(regex, newVal)	Replaces match with something else
+
+.test() is a case-sensitive method but if you want to check it case-insensitivity then use "i" at the end of reg exp.
+Example:
+    const regex = /dog/i;
+    console.log(regex.test("DOG")); // ✅ true
+
+.match():
+Example:
+    const regex = "hello";
+    const str1 = regex.match("LL");      
+    const str2 = regex.match(/LL/i);     i is for case-insensitive
+
+    console.log(str1);   // null
+    console.log(str2);   // [ 'll', index: 2, input: 'hello', groups: undefined ]
+
+.replace():
+    It only replace the 1st occurrence so if you want to check the whole string then use global modifier: /g
+.replaceAll():
+    It will replace all the values from the string.
+
+RegEx Modifiers:
+    i   -   case-insensitive
+    g   -   global
+    ^   -   start
+    $   -   end
+    s   -   single-line
+    m   -   multi-line
+    u   -   unicode-matching
+RegEx Character Modifiers:
+    \d  -   indices or digit [0-9]
+    \s  -   whitespaces character like newline,tabs and spaces
+    \w  -   word character [a-zA-Z0-9_]
+    \D  -   not of indices or digit [0-9]
+    \S  -   not of whitespaces character like newline,tabs and spaces
+    \W  -   not of word character [a-zA-Z0-9_]
+
+dot(.):
+    dot (.) in regular expressions is a special character that acts as a wildcard.  It matches any single character except line breaks (by default).
+Example:
+    const str = "cat, cot, cut, c@t, c t";
+    const matches = str.match(/c.t/g);
+c.t matches:
+    'c' → literal c
+    '.' → any character
+    't' → literal t
+
+
+- Lookahead and lookbehind assertions allow you to match specific patterns based on the presence or lack of surrounding patterns.
+- They match a position, not actual characters.
+- There are four variations of these assertions.
+
+Positive Lookahead(?=):
+    It match a pattern when the pattern is followed by another pattern.
+Example:
+    const regex = /free(?=code)/i;
+    console.log(regex.test("freeCodeCamp"));    // true
+    console.log(regex.test("free code camp"));  // false
+    console.log(regex.test("I need someone for free to write code for me"));    // false
+
+Negative Lookahead(?!):
+    It's the opposite of positive lookahead.
+Example:
+    const regex = /free(?!code)/i;
+    console.log(regex.test("freeCodeCamp"));    // false
+    console.log(regex.test("free code camp"));  // true
+    console.log(regex.test("I need someone for free to write code for me"));    // true
+
+Positive Lookbehind(?<=):
+Example:
+    const regex = /(?<=free)code/i;
+    console.log(regex.test("freeCodeCamp"));    // true
+    console.log(regex.test("free code camp"));  // false
+    console.log(
+    regex.test("I need someone for free to write code for me")); // false
+
+Negative Lookbehind(?<!>):
+Example:
+    const regex = /(?<!free)code/i;
+    console.log(regex.test("freeCodeCamp"));    // false
+    console.log(regex.test("free code camp"));  // true
+    console.log(
+    regex.test("I need someone for free to write code for me")); // true
+
+
+Regex Quantifiers:
+    Suppose you want to match 4-digit identification code then you use \d character four times.
+Example:
+    let str = /^\d\d\d\d$;
+    let matched = str.test("1234");
+    console.log(matched);   // true
+- But you can use the quantifier instead of writing same class multiple time.
+Example:
+    let str = /^\d{4}$/;
+    let matched = str.test("1234");
+    console.log(matched);   // true
+- If you want to add condition like minimum 4 digit and max can be anything then,
+Example:    never add space inside curly braces.
+    let str = /^\d{4,}$/;
+    let matched = str.test("123456789");
+    console.log(matched);
+- If you want to add condition like minimum digits or maximum digits then,
+Example:
+    let str = /^\d{4,8}$/;
+    let matched = str.test("123456789");
+    console.log(matched);
+- If you want the characters to be included in front then,
+    let str = /^[a-zA-Z]\d{4,6}$/;
+- Character validation can be done with 3 methods: ?, *, +
+    ? - Match 0 or 1 occurrence
+Example:
+    const regex = /^[a-zA-Z]?\d{4,6}$/;
+    console.log(regex.test("123")); // false
+    console.log(regex.test("a1234")); // true
+    console.log(regex.test("az1234")); // false
+
+    * - Match 0 or more occurrences
+Example:
+    const regex = /^[a-zA-Z]*\d{4,6}$/;
+    console.log(regex.test("123")); // false
+    console.log(regex.test("a1234")); // true
+    console.log(regex.test("az1234")); // true
+
+    + - Match at least 1 or more occurrences
+Example:
+    const regex = /^[a-zA-Z]+\d{4,6}$/;
+    console.log(regex.test("a1234")); // true
+    console.log(regex.test("az12345")); // true
+    console.log(regex.test("1234567")); // false

@@ -1,7 +1,3 @@
-const regex = /hello/i;
-
-const str = "hello world";
-
-const replaced = str.replace(regex, "Hello");
-
-console.log(replaced);
+let str = /[a-zA-Z]+\d{4,5}/;
+    let matched = str.test("a12355555z");
+    console.log(matched);

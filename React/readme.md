@@ -2,7 +2,7 @@
 
 - ReactJS is a JS library and not a framework.
 - NextJS is a framework.
-- ReactJS is used to make single-page application.
+- ReactJS is used to make single-page applications(SPAs).
 
 - To create basic react app: (outdated and no longer in use)
   npx create-react-app app-name
@@ -19,22 +19,50 @@
   1st number is known for React Major update version,
   2nd number is known as Miner update version,
   3rd number is the bug fixes version
-  To update to the react latest version use below cammand:
-  npm i react@rc react-dom@rc
+  To update to the react latest version use below command:
+    - npm i react@rc react-dom@rc
 
-      Controlled Components:
-          These are only those components in which form is available with the input fields.
+Difference between `dependencies` and `devDependencies`:
+  In React once the project is created, you will see the "dependencies" and "devDependencies" in package.json file.
+    dependencies - means on which your project is created and running.
+    devDependencies - means by the use of them development is happening.
+
+  Controlled Components:
+    These are only those components in which form is available with the input fields.
+
+  | Priority  | Concept                                        |
+  | --------- | ---------------------------------------------- |
+  | ⭐ High   | `useState`, `useEffect`, JSX, props, routing   |
+  | ⭐ High   | Forms, Context API, API handling               |
+  | ⭐ High   | React Query, custom hooks, useMemo/useCallback |
+  | ⭐ High   | TypeScript, form validation, testing           |
+  | ⚠️ Medium | Redux, Zustand, useReducer (when needed)       |
+  | ✅ Bonus  | i18n, accessibility, performance tuning        |
+  
 
 ## React Hooks:
 
-    1) useState:
-        It helps to make the changes in your DOM when the click event is happen on the button on any other.
-    - Syn: const [count, setCount] = useState(0);
-    - Key Concept:
-        1. variable of the default value.
-        2. Setter function to change the default value.
+| Hook                  | Use Case                        | Required in SaaS?  |
+| --------------------- | ------------------------------- | -----------------  |
+| `useState`            | Local state                     | ✅ Must-know       |
+| `useEffect`           | Side effects                    | ✅ Must-know       |
+| `useContext`          | Global/shared state             | ✅ Must-know       |
+| `useRef`              | Persistent mutable refs         | ✅ Must-know       |
+| `useMemo`             | Optimize expensive calculations | ✅ Must-know       |
+| `useCallback`         | Optimize function references    | ✅ Must-know       |
+| `useReducer`          | Complex state management        | ✅ Frequently used |
+| `useLayoutEffect`     | Pre-paint side effects          | 🟡 Sometimes used  |
+| `useImperativeHandle` | Expose component methods        | 🟡 Sometimes used  |
 
-    2) useEffect:
+
+  1) useState:
+      It helps to make the changes in your DOM when the click event is happen on the button on any other.
+  - Syn: const [state, setState] = useState(default value);
+  - Key Concept:
+      1. variable of the default value.
+      2. Setter function to change the default value.
+
+  2) useEffect:
         It lets you perform side effects in function components.
     - Example:
         - Fetching data from API server
@@ -45,10 +73,10 @@
         1. Effect Func: The 1st argument is the func that runs the side effect.
         2. Dependency Array(optional): It is an optional array of dependencies that controls when the effect runs. If you pass an empty array([]), then useEffect will run only once.
 
-    3) useRef:
-
+  3) useRef:
+    
+    
 Interview Questions:
-
 1. Difference between library and a framework?
    Library:
    You call the code.
